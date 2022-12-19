@@ -1,0 +1,113 @@
+
+-- DDL : Data definition Language [CREATE DATABASE,ALTER,DROP,TRUNCATE]
+-- Change / alter the structure of the datatable
+
+
+-- DML : Data Manipulation Language[CREATE TABLE,INSERT,UPDATE,DELETE]
+-- make changes to the values inside the table 
+
+-- DQL : Data Query Language[SELECT]
+-- Access the data
+
+-- TCL : Transaction control language
+-- Maintain the transaction in your table BEGIN,END
+
+-- DCL : Data control language
+-- Who to access the data GRANT ,REVOKE
+
+--Normalization 
+-- Avoid data redundancy - avoid duplicate / repeated data on the tables
+-- 1NF : Creating 1 key / table - Each cell must hold one unique value
+-- 2NF : No partial dependencies (foreign key constraint)
+-- 3NF : No transitive dependency 
+
+Create database HCL_DB
+
+use hcl_db
+
+create table Player(playerId int primary key,playerName varchar(25),maxScore int,lastPlayDate date)
+create table Game(Gid int primary key,GameName varchar(20),maxPlayers int,gametype varchar(20))
+
+select * from player
+select * from game
+
+insert into player values (101,'Jenifer',500,'12/12/2022')
+insert into player values (102,'Rahul',250,'12/1/2022')
+
+insert into game(gid,gamename,maxplayers,gametype) values
+(1001,'Rummycircle',4,'multiplayer'),
+(1002,'XOXO',2,'multiplayer'),
+(1003,'shooting',10,'multiplayer'),
+(1004,'rockpapersciccor',12,'multiplayer'),
+(1005,'sukodo',1,'singleplayer')
+
+-- Delete : deleting the specific record from the table
+-- where CLAUSE : specifying the condition 
+-- Drop : remove the table from the database
+-- Truncate : clear all the values inside the table
+
+delete from game where gid=1005
+
+truncate table game
+
+drop table game
+
+
+-- update : changes made to the values inside the table
+-- alter : changing the structure of the table itself
+
+update game set gamename='ludo' where gid=1002
+
+update game set maxplayers=15 where gametype='multiplayer'
+
+update game set level='easy' where gametype='multiplayer'
+
+alter table game add level varchar(25)
+
+select * from game
+
+select * from player
+
+alter table player
+add gameid int 
+
+alter table player
+add constraint
+fk_gameid foreign key(gameid)
+references game(gid)
+on delete cascade
+on update cascade
+
+update player set gameid = 1002 where playername='jenifer'
+
+update player set gameid = 1004 where playername='Rahul'
+
+delete from game where gid=1002
+
+update game set gid=0001 where gid=1004
+
+
+select * from game
+select * from player
+
+select avg(maxplayers) as 'average score' from game
+
+select count(gid) as 'total players' from game 
+
+select count(gamename) from game group by gametype
+
+select * from game order by maxplayers asc
+
+select top 2 * from game
+
+select max(gid) from game
+select min(gid) from game
+
+select * from game
+
+select gamename from game where gamename like '%e'
+
+select count(gid),gametype
+from game
+group by gametype
+having count(gid)>1
