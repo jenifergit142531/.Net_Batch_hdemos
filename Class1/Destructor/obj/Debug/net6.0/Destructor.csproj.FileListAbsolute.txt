@@ -1,0 +1,15 @@
+C:\demo\Class1\Destructor\bin\Debug\net6.0\Destructor.exe
+C:\demo\Class1\Destructor\bin\Debug\net6.0\Destructor.deps.json
+C:\demo\Class1\Destructor\bin\Debug\net6.0\Destructor.runtimeconfig.json
+C:\demo\Class1\Destructor\bin\Debug\net6.0\Destructor.dll
+C:\demo\Class1\Destructor\bin\Debug\net6.0\Destructor.pdb
+C:\demo\Class1\Destructor\obj\Debug\net6.0\Destructor.csproj.AssemblyReference.cache
+C:\demo\Class1\Destructor\obj\Debug\net6.0\Destructor.GeneratedMSBuildEditorConfig.editorconfig
+C:\demo\Class1\Destructor\obj\Debug\net6.0\Destructor.AssemblyInfoInputs.cache
+C:\demo\Class1\Destructor\obj\Debug\net6.0\Destructor.AssemblyInfo.cs
+C:\demo\Class1\Destructor\obj\Debug\net6.0\Destructor.csproj.CoreCompileInputs.cache
+C:\demo\Class1\Destructor\obj\Debug\net6.0\Destructor.dll
+C:\demo\Class1\Destructor\obj\Debug\net6.0\refint\Destructor.dll
+C:\demo\Class1\Destructor\obj\Debug\net6.0\Destructor.pdb
+C:\demo\Class1\Destructor\obj\Debug\net6.0\Destructor.genruntimeconfig.cache
+C:\demo\Class1\Destructor\obj\Debug\net6.0\ref\Destructor.dll

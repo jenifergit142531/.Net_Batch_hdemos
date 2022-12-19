@@ -1,0 +1,15 @@
+C:\demo\Class1\Polymorphism\bin\Debug\net6.0\Polymorphism.exe
+C:\demo\Class1\Polymorphism\bin\Debug\net6.0\Polymorphism.deps.json
+C:\demo\Class1\Polymorphism\bin\Debug\net6.0\Polymorphism.runtimeconfig.json
+C:\demo\Class1\Polymorphism\bin\Debug\net6.0\Polymorphism.dll
+C:\demo\Class1\Polymorphism\bin\Debug\net6.0\Polymorphism.pdb
+C:\demo\Class1\Polymorphism\obj\Debug\net6.0\Polymorphism.csproj.AssemblyReference.cache
+C:\demo\Class1\Polymorphism\obj\Debug\net6.0\Polymorphism.GeneratedMSBuildEditorConfig.editorconfig
+C:\demo\Class1\Polymorphism\obj\Debug\net6.0\Polymorphism.AssemblyInfoInputs.cache
+C:\demo\Class1\Polymorphism\obj\Debug\net6.0\Polymorphism.AssemblyInfo.cs
+C:\demo\Class1\Polymorphism\obj\Debug\net6.0\Polymorphism.csproj.CoreCompileInputs.cache
+C:\demo\Class1\Polymorphism\obj\Debug\net6.0\Polymorphism.dll
+C:\demo\Class1\Polymorphism\obj\Debug\net6.0\refint\Polymorphism.dll
+C:\demo\Class1\Polymorphism\obj\Debug\net6.0\Polymorphism.pdb
+C:\demo\Class1\Polymorphism\obj\Debug\net6.0\Polymorphism.genruntimeconfig.cache
+C:\demo\Class1\Polymorphism\obj\Debug\net6.0\ref\Polymorphism.dll

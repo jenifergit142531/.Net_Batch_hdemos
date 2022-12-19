@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "uC66uUN5XjDM4asD6KEaEHb9o0wW5wb8kT7HHYVkAkE=",
+  "Source": "JenkinsWebAppDemo",
+  "BasePath": "_content/JenkinsWebAppDemo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

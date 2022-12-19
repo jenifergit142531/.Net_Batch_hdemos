@@ -1,0 +1,136 @@
+
+
+Agenda :
+
+* Revisit the last week concepts
+
+Abstract classes
+Interface
+switch statement
+Destructor
+Encapsulation vs Abstraction
+is - a vs has - a relationship
+polymorphism(method overloading vs method overriding)
+* Exception Handling
+
+
+Abstract class:
+
+- Class that is abstract ( no implementation)
+- Abstract keyword
+- Can have both abstract method and concrete method
+- the inherited class MUST implement the abstract methods from the parent / base class
+- use "override" keyword to overide the base class method
+- cannot instantiate  abstract class
+
+parent class(Salary) - abstract 
+child1(HR) - bs * bonus
+Child2(Sales) - bs * incentives
+child3(SE) - fixed bs
+
+Interface :(best design practise)
+
+- It says "What to do"
+- Do not say "How to do"
+- strictly have only empty methods
+- Interface keyword
+- Implement the interface
+- dont use "override " keyword
+- must implement "ALL THE METHODS" in the interface
+
+Switch Statement :
+
+- Conditional construct
+- check for multiple conditions at the same time
+
+Destructor:
+
+- Destroy the instance of the class
+- destructor name and class name must be the same
+- ~destructorname()
+- does not accept parameters
+- Cannot be overloaded or inherited
+- ONLY ONE DESTRUCTOR for a class
+- only when your program exists 
+
+Encapsulation :
+
+- Wrap the data and function in single unit
+- Access modifiers
+* Private
+* Public
+* Protected 
+
+
+
+Scenarios : Which one make sense ???
+
+usecase 1 :
+
+- Jenifer IS - A Address
+- Jenifer HAS - A Address (correct)
+
+usecase 2:
+
+- BMW IS - A Car (correct)
+- BMW HAS - A Car 
+
+IS- A :Inheritance
+HAS - A : Composition
+
+Polymorphism : many forms
+
+Poly => many
+morph => forms
+
+- Method overloading (single class)
+- Method overriding (only in inheritance when you have parent / child class)
+
+
+Method overloading :
+
+- same method with different signatures
+- signature : different data types and different number of parameters
+
+
+Errors : See at the build or while coding (typo)
+Exception : occurs at run time 
+
+* need to handle the exceptions
+* Identity the exception
+* Give a customized message to the user
+
+How ???
+
+- Exception handler (run time service provided by the CLR)
+
+Steps ??
+
+TRY   : Check for problems in your code
+CATCH : handle the exception 
+FINALLY : execute whether the exception occurs or not 
+
+* closing the resource / database connection before exiting the exception handler 
+
+- throw : throw the exception to another method for handling it 
+
+Base class / libraries :
+
+System.Exception
+
+Types :
+
+- Built in exception
+
+IO Exception
+dividebyzero exception
+Index out range exception
+NullReference exception
+
+
+
+- User defined exceptins / custom exception 
+
+* created by users with some logical definition
+
+

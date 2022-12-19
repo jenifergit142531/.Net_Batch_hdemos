@@ -1,0 +1,15 @@
+C:\demo\Class1\Encapsulation\bin\Debug\net6.0\Encapsulation.exe
+C:\demo\Class1\Encapsulation\bin\Debug\net6.0\Encapsulation.deps.json
+C:\demo\Class1\Encapsulation\bin\Debug\net6.0\Encapsulation.runtimeconfig.json
+C:\demo\Class1\Encapsulation\bin\Debug\net6.0\Encapsulation.dll
+C:\demo\Class1\Encapsulation\bin\Debug\net6.0\Encapsulation.pdb
+C:\demo\Class1\Encapsulation\obj\Debug\net6.0\Encapsulation.csproj.AssemblyReference.cache
+C:\demo\Class1\Encapsulation\obj\Debug\net6.0\Encapsulation.GeneratedMSBuildEditorConfig.editorconfig
+C:\demo\Class1\Encapsulation\obj\Debug\net6.0\Encapsulation.AssemblyInfoInputs.cache
+C:\demo\Class1\Encapsulation\obj\Debug\net6.0\Encapsulation.AssemblyInfo.cs
+C:\demo\Class1\Encapsulation\obj\Debug\net6.0\Encapsulation.csproj.CoreCompileInputs.cache
+C:\demo\Class1\Encapsulation\obj\Debug\net6.0\Encapsulation.dll
+C:\demo\Class1\Encapsulation\obj\Debug\net6.0\refint\Encapsulation.dll
+C:\demo\Class1\Encapsulation\obj\Debug\net6.0\Encapsulation.pdb
+C:\demo\Class1\Encapsulation\obj\Debug\net6.0\Encapsulation.genruntimeconfig.cache
+C:\demo\Class1\Encapsulation\obj\Debug\net6.0\ref\Encapsulation.dll

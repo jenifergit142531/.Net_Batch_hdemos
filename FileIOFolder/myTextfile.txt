@@ -1,0 +1,2 @@
+Hello c#
+This is a abstract text class

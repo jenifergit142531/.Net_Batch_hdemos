@@ -1,0 +1,15 @@
+C:\demo\Class1\ZeroException\bin\Debug\net6.0\ZeroException.exe
+C:\demo\Class1\ZeroException\bin\Debug\net6.0\ZeroException.deps.json
+C:\demo\Class1\ZeroException\bin\Debug\net6.0\ZeroException.runtimeconfig.json
+C:\demo\Class1\ZeroException\bin\Debug\net6.0\ZeroException.dll
+C:\demo\Class1\ZeroException\bin\Debug\net6.0\ZeroException.pdb
+C:\demo\Class1\ZeroException\obj\Debug\net6.0\ZeroException.csproj.AssemblyReference.cache
+C:\demo\Class1\ZeroException\obj\Debug\net6.0\ZeroException.GeneratedMSBuildEditorConfig.editorconfig
+C:\demo\Class1\ZeroException\obj\Debug\net6.0\ZeroException.AssemblyInfoInputs.cache
+C:\demo\Class1\ZeroException\obj\Debug\net6.0\ZeroException.AssemblyInfo.cs
+C:\demo\Class1\ZeroException\obj\Debug\net6.0\ZeroException.csproj.CoreCompileInputs.cache
+C:\demo\Class1\ZeroException\obj\Debug\net6.0\ZeroException.dll
+C:\demo\Class1\ZeroException\obj\Debug\net6.0\refint\ZeroException.dll
+C:\demo\Class1\ZeroException\obj\Debug\net6.0\ZeroException.pdb
+C:\demo\Class1\ZeroException\obj\Debug\net6.0\ZeroException.genruntimeconfig.cache
+C:\demo\Class1\ZeroException\obj\Debug\net6.0\ref\ZeroException.dll

@@ -1,0 +1,17 @@
+C:\demo\class3\class3\bin\Debug\net6.0\class3.exe
+C:\demo\class3\class3\bin\Debug\net6.0\class3.deps.json
+C:\demo\class3\class3\bin\Debug\net6.0\class3.runtimeconfig.json
+C:\demo\class3\class3\bin\Debug\net6.0\class3.dll
+C:\demo\class3\class3\bin\Debug\net6.0\class3.pdb
+C:\demo\class3\class3\obj\Debug\net6.0\class3.csproj.AssemblyReference.cache
+C:\demo\class3\class3\obj\Debug\net6.0\class3.GeneratedMSBuildEditorConfig.editorconfig
+C:\demo\class3\class3\obj\Debug\net6.0\class3.AssemblyInfoInputs.cache
+C:\demo\class3\class3\obj\Debug\net6.0\class3.AssemblyInfo.cs
+C:\demo\class3\class3\obj\Debug\net6.0\class3.csproj.CoreCompileInputs.cache
+C:\demo\class3\class3\obj\Debug\net6.0\class3.dll
+C:\demo\class3\class3\obj\Debug\net6.0\refint\class3.dll
+C:\demo\class3\class3\obj\Debug\net6.0\class3.pdb
+C:\demo\class3\class3\obj\Debug\net6.0\class3.genruntimeconfig.cache
+C:\demo\class3\class3\obj\Debug\net6.0\ref\class3.dll
+C:\demo\class3\class3\bin\Debug\net6.0\CsvHelper.dll
+C:\demo\class3\class3\obj\Debug\net6.0\class3.csproj.CopyComplete

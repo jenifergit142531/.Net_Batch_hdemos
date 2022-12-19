@@ -1,0 +1,58 @@
+
+
+Agenda :
+
+- Multithreading
+-> concurrency
+--> Asynchronous programming(Async/Await)
+
+
+Background thread 
+
+- when main thread stops execution, the child thread also stops the execution
+
+Foreground thread
+
+- Even if the main thread stops,child thread will keep executing
+
+Concurrency :
+
+DoinG several trhings at the same time.
+
+Task parallel library  :TPL
+
+- only do the parallel processing 
+
+3 syntax :
+
+1. Task tobj=new Task();
+
+2.Task tobj = Task.Run() =>
+{
+//some task code goes gere
+}
+
+3.Task tobj=Task.Factory.StartNew();
+
+Async : Asynchrounously
+Await :wait for specified period of time
+
+TPL Library :
+
+- Set of predefined methods and constructs for implementaing data and task parallelism.
+
+
+1.Data Parallelism :
+
+-> Parallel FOR
+-> Parallel For Each
+
+2.Task Parallelism
+-> Parallel.Invoke(m1,m2,m3)
+
+
+
+
+
+
+

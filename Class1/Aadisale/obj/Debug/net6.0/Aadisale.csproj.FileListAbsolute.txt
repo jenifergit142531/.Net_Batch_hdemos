@@ -1,0 +1,15 @@
+C:\demo\Class1\Aadisale\bin\Debug\net6.0\Aadisale.exe
+C:\demo\Class1\Aadisale\bin\Debug\net6.0\Aadisale.deps.json
+C:\demo\Class1\Aadisale\bin\Debug\net6.0\Aadisale.runtimeconfig.json
+C:\demo\Class1\Aadisale\bin\Debug\net6.0\Aadisale.dll
+C:\demo\Class1\Aadisale\bin\Debug\net6.0\Aadisale.pdb
+C:\demo\Class1\Aadisale\obj\Debug\net6.0\Aadisale.csproj.AssemblyReference.cache
+C:\demo\Class1\Aadisale\obj\Debug\net6.0\Aadisale.GeneratedMSBuildEditorConfig.editorconfig
+C:\demo\Class1\Aadisale\obj\Debug\net6.0\Aadisale.AssemblyInfoInputs.cache
+C:\demo\Class1\Aadisale\obj\Debug\net6.0\Aadisale.AssemblyInfo.cs
+C:\demo\Class1\Aadisale\obj\Debug\net6.0\Aadisale.csproj.CoreCompileInputs.cache
+C:\demo\Class1\Aadisale\obj\Debug\net6.0\Aadisale.dll
+C:\demo\Class1\Aadisale\obj\Debug\net6.0\refint\Aadisale.dll
+C:\demo\Class1\Aadisale\obj\Debug\net6.0\Aadisale.pdb
+C:\demo\Class1\Aadisale\obj\Debug\net6.0\Aadisale.genruntimeconfig.cache
+C:\demo\Class1\Aadisale\obj\Debug\net6.0\ref\Aadisale.dll

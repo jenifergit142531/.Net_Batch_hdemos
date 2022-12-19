@@ -1,0 +1,15 @@
+C:\demo\Week3_Class2App\HMSApp\obj\Debug\net6.0\HMSApp.csproj.AssemblyReference.cache
+C:\demo\Week3_Class2App\HMSApp\obj\Debug\net6.0\HMSApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\demo\Week3_Class2App\HMSApp\obj\Debug\net6.0\HMSApp.AssemblyInfoInputs.cache
+C:\demo\Week3_Class2App\HMSApp\obj\Debug\net6.0\HMSApp.AssemblyInfo.cs
+C:\demo\Week3_Class2App\HMSApp\obj\Debug\net6.0\HMSApp.csproj.CoreCompileInputs.cache
+C:\demo\Week3_Class2App\HMSApp\bin\Debug\net6.0\HMSApp.exe
+C:\demo\Week3_Class2App\HMSApp\bin\Debug\net6.0\HMSApp.deps.json
+C:\demo\Week3_Class2App\HMSApp\bin\Debug\net6.0\HMSApp.runtimeconfig.json
+C:\demo\Week3_Class2App\HMSApp\bin\Debug\net6.0\HMSApp.dll
+C:\demo\Week3_Class2App\HMSApp\bin\Debug\net6.0\HMSApp.pdb
+C:\demo\Week3_Class2App\HMSApp\obj\Debug\net6.0\HMSApp.dll
+C:\demo\Week3_Class2App\HMSApp\obj\Debug\net6.0\refint\HMSApp.dll
+C:\demo\Week3_Class2App\HMSApp\obj\Debug\net6.0\HMSApp.pdb
+C:\demo\Week3_Class2App\HMSApp\obj\Debug\net6.0\HMSApp.genruntimeconfig.cache
+C:\demo\Week3_Class2App\HMSApp\obj\Debug\net6.0\ref\HMSApp.dll

@@ -1,0 +1,15 @@
+C:\demo\class2\RegistrationPage\bin\Debug\net6.0\RegistrationPage.exe
+C:\demo\class2\RegistrationPage\bin\Debug\net6.0\RegistrationPage.deps.json
+C:\demo\class2\RegistrationPage\bin\Debug\net6.0\RegistrationPage.runtimeconfig.json
+C:\demo\class2\RegistrationPage\bin\Debug\net6.0\RegistrationPage.dll
+C:\demo\class2\RegistrationPage\bin\Debug\net6.0\RegistrationPage.pdb
+C:\demo\class2\RegistrationPage\obj\Debug\net6.0\RegistrationPage.csproj.AssemblyReference.cache
+C:\demo\class2\RegistrationPage\obj\Debug\net6.0\RegistrationPage.GeneratedMSBuildEditorConfig.editorconfig
+C:\demo\class2\RegistrationPage\obj\Debug\net6.0\RegistrationPage.AssemblyInfoInputs.cache
+C:\demo\class2\RegistrationPage\obj\Debug\net6.0\RegistrationPage.AssemblyInfo.cs
+C:\demo\class2\RegistrationPage\obj\Debug\net6.0\RegistrationPage.csproj.CoreCompileInputs.cache
+C:\demo\class2\RegistrationPage\obj\Debug\net6.0\RegistrationPage.dll
+C:\demo\class2\RegistrationPage\obj\Debug\net6.0\refint\RegistrationPage.dll
+C:\demo\class2\RegistrationPage\obj\Debug\net6.0\RegistrationPage.pdb
+C:\demo\class2\RegistrationPage\obj\Debug\net6.0\RegistrationPage.genruntimeconfig.cache
+C:\demo\class2\RegistrationPage\obj\Debug\net6.0\ref\RegistrationPage.dll

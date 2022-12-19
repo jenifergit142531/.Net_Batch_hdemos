@@ -1,0 +1,15 @@
+C:\demo\Week3_Class2App\Week3_Class2App\bin\Debug\net6.0\Week3_Class2App.exe
+C:\demo\Week3_Class2App\Week3_Class2App\bin\Debug\net6.0\Week3_Class2App.deps.json
+C:\demo\Week3_Class2App\Week3_Class2App\bin\Debug\net6.0\Week3_Class2App.runtimeconfig.json
+C:\demo\Week3_Class2App\Week3_Class2App\bin\Debug\net6.0\Week3_Class2App.dll
+C:\demo\Week3_Class2App\Week3_Class2App\bin\Debug\net6.0\Week3_Class2App.pdb
+C:\demo\Week3_Class2App\Week3_Class2App\obj\Debug\net6.0\Week3_Class2App.csproj.AssemblyReference.cache
+C:\demo\Week3_Class2App\Week3_Class2App\obj\Debug\net6.0\Week3_Class2App.GeneratedMSBuildEditorConfig.editorconfig
+C:\demo\Week3_Class2App\Week3_Class2App\obj\Debug\net6.0\Week3_Class2App.AssemblyInfoInputs.cache
+C:\demo\Week3_Class2App\Week3_Class2App\obj\Debug\net6.0\Week3_Class2App.AssemblyInfo.cs
+C:\demo\Week3_Class2App\Week3_Class2App\obj\Debug\net6.0\Week3_Class2App.csproj.CoreCompileInputs.cache
+C:\demo\Week3_Class2App\Week3_Class2App\obj\Debug\net6.0\Week3_Class2App.dll
+C:\demo\Week3_Class2App\Week3_Class2App\obj\Debug\net6.0\refint\Week3_Class2App.dll
+C:\demo\Week3_Class2App\Week3_Class2App\obj\Debug\net6.0\Week3_Class2App.pdb
+C:\demo\Week3_Class2App\Week3_Class2App\obj\Debug\net6.0\Week3_Class2App.genruntimeconfig.cache
+C:\demo\Week3_Class2App\Week3_Class2App\obj\Debug\net6.0\ref\Week3_Class2App.dll

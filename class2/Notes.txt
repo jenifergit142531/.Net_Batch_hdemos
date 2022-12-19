@@ -1,0 +1,139 @@
+
+
+Agenda :
+- Recap
+- Exception handling
+- Annotations in c#
+
+- Collections
+* Hashtable
+* ArrayList
+* Stack 
+* Queue
+
+- Generics
+* Stack
+* Queue
+* Hashset
+
+Built in exception :
+/* Index out of range exception
+            int[] numbers = { 10, 20, 20, 40, 50 };
+            for(int i=0;i<numbers.Length;i++)
+            {
+                Console.WriteLine(numbers[i]);
+            }
+
+            Console.WriteLine(numbers[6]);
+            */
+           /* 
+            * Divide by zero error
+            * Console.WriteLine("Enter a :");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter b :");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int c = a / b;*/
+
+Custom Exception :
+- Check user defined conditions
+- THROW the exception to the exception handler method
+
+
+Data Annotations :
+
+- define some rules on data
+- How data is displayed on UI / Validating the imput
+- System.ComponentModel.DataAnnotation
+- Specified as attibute [attributename]
+
+Attributes : 
+* Validation attribute : enforce validation rules on the properties
+* Display attribute : specify how data should be displayed on UI
+* Modeling attribute : Specify the relationship exists between the class
+
+Data annotations:
+- Required
+- MaxLength , minimum length
+- String length
+- Key
+- Timestamp
+
+Collections :
+
+- Deals with large volume of data
+- data structure 
+- IEnumerable 
+
+Types :
+
+1. Index based : ArrayList
+2. KeyValue : Hash table , Sorted list
+3. Prioritised : stack,queue
+4. Specialised : string ,Dictionary
+
+
+a[0]= 10
+a[1]=45
+a[2]=65
+
+
+Array : fixed size,you need to change the size every time based on the requirement 
+
+ public static void show()
+    {
+        int[] a = new int[5];
+        Console.WriteLine("Enter the array elements");
+        for (int i = 0; i < a.Length; i++)
+        {
+            a[i] = Convert.ToInt32(Console.ReadLine());
+        }
+        Console.WriteLine("Actual data :");
+        foreach(int i in a)
+        {
+            Console.WriteLine(i);
+        }
+    }
+
+
+Arraylist : Dynamic in nature
+ * size can be enhanced
+ * create a object
+ * Length : actual number of elements in the array
+ * capacity : max storage available 
+
+
+ Stack :LIFO
+ - last in first out
+ - pile of books
+ push - add value to stack
+ pop - remove value from stack
+
+ stack - non generic stack - accept all data value
+ stack<T> - generic stack that is specific to single data value
+
+ Queue :FIFO
+ - first in first out 
+ - food ordering app,ticket
+ enqueue - add value to the queue
+ dequeue - remove value from the queue
+
+queue - non generic queue - accept all data value
+ queue<T> - generic stack that is specific to single data value
+
+ Hashset : generic 
+ - IEnumerable,ICollection,ISet
+ - must be unique
+ - duplicate values are not allowed
+ - cannot sort the elements in hashset
+ - stores elements only with same type 
+
+
+ Hashtable :
+ - non generic
+ - associate with key and value
+ - key cannot be null
+ - keys must be unique and duplicate keys are not allowed
+ - but value can be null
+
+
+

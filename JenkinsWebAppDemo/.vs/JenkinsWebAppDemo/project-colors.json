@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "79fc261d-3b75-407a-8cb5-e124dc37e121": {
+      "ProjectGuid": "79fc261d-3b75-407a-8cb5-e124dc37e121",
+      "DisplayName": "JenkinsWebAppDemo",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -1,0 +1,15 @@
+C:\demo\Week3_Class2App\DI\obj\Debug\net7.0\DI.csproj.AssemblyReference.cache
+C:\demo\Week3_Class2App\DI\obj\Debug\net7.0\DI.GeneratedMSBuildEditorConfig.editorconfig
+C:\demo\Week3_Class2App\DI\obj\Debug\net7.0\DI.AssemblyInfoInputs.cache
+C:\demo\Week3_Class2App\DI\obj\Debug\net7.0\DI.AssemblyInfo.cs
+C:\demo\Week3_Class2App\DI\obj\Debug\net7.0\DI.csproj.CoreCompileInputs.cache
+C:\demo\Week3_Class2App\DI\bin\Debug\net7.0\DI.exe
+C:\demo\Week3_Class2App\DI\bin\Debug\net7.0\DI.deps.json
+C:\demo\Week3_Class2App\DI\bin\Debug\net7.0\DI.runtimeconfig.json
+C:\demo\Week3_Class2App\DI\bin\Debug\net7.0\DI.dll
+C:\demo\Week3_Class2App\DI\bin\Debug\net7.0\DI.pdb
+C:\demo\Week3_Class2App\DI\obj\Debug\net7.0\DI.dll
+C:\demo\Week3_Class2App\DI\obj\Debug\net7.0\refint\DI.dll
+C:\demo\Week3_Class2App\DI\obj\Debug\net7.0\DI.pdb
+C:\demo\Week3_Class2App\DI\obj\Debug\net7.0\DI.genruntimeconfig.cache
+C:\demo\Week3_Class2App\DI\obj\Debug\net7.0\ref\DI.dll

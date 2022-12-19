@@ -1,0 +1,15 @@
+C:\demo\class3\SingleLinkedListApp\obj\Debug\net6.0\SingleLinkedListApp.csproj.AssemblyReference.cache
+C:\demo\class3\SingleLinkedListApp\obj\Debug\net6.0\SingleLinkedListApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\demo\class3\SingleLinkedListApp\obj\Debug\net6.0\SingleLinkedListApp.AssemblyInfoInputs.cache
+C:\demo\class3\SingleLinkedListApp\obj\Debug\net6.0\SingleLinkedListApp.AssemblyInfo.cs
+C:\demo\class3\SingleLinkedListApp\obj\Debug\net6.0\SingleLinkedListApp.csproj.CoreCompileInputs.cache
+C:\demo\class3\SingleLinkedListApp\bin\Debug\net6.0\SingleLinkedListApp.exe
+C:\demo\class3\SingleLinkedListApp\bin\Debug\net6.0\SingleLinkedListApp.deps.json
+C:\demo\class3\SingleLinkedListApp\bin\Debug\net6.0\SingleLinkedListApp.runtimeconfig.json
+C:\demo\class3\SingleLinkedListApp\bin\Debug\net6.0\SingleLinkedListApp.dll
+C:\demo\class3\SingleLinkedListApp\bin\Debug\net6.0\SingleLinkedListApp.pdb
+C:\demo\class3\SingleLinkedListApp\obj\Debug\net6.0\SingleLinkedListApp.dll
+C:\demo\class3\SingleLinkedListApp\obj\Debug\net6.0\refint\SingleLinkedListApp.dll
+C:\demo\class3\SingleLinkedListApp\obj\Debug\net6.0\SingleLinkedListApp.pdb
+C:\demo\class3\SingleLinkedListApp\obj\Debug\net6.0\SingleLinkedListApp.genruntimeconfig.cache
+C:\demo\class3\SingleLinkedListApp\obj\Debug\net6.0\ref\SingleLinkedListApp.dll

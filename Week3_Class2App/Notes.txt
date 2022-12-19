@@ -1,0 +1,152 @@
+
+
+
+Agenda :
+
+- Memory management 
+    *garbage collection
+    - Unit Testing(XUnit,MSTest,Nunit)
+
+    - SOLID Design pattern
+    - SQL Introduction
+    - SQL Installation
+    - DDL Queries
+
+
+
+ Memory Management :
+
+ - Heap : Reference type.It holds objects,strings,array...
+ - Stack : value type..It stores variables,methods..
+
+ .Net => Stack + Heap
+
+ Garbage collection :
+ - GC happens automatically in the .Net Platform
+ - Periodic check that looks for unused objects for a longer period of time
+ - It will delete those objects
+
+ Eg :  EmployeePayrollObj1 ----->  F&F Settlement 
+
+
+
+ 
+
+
+ - Finalize () :  check for dependencies in the code and delete those dependencies before deleting the object.
+
+ Database connection
+ File I/O
+
+
+ - GC.Collect () - calling GC Explicitly
+
+ Generations :
+
+ How long the objects are staying in the memory.
+
+ APP1:
+
+ Generation 0: 0
+
+ - Any unused objects() : ob1,ob2 -> delete these objects
+
+
+ Generation 1: 0
+
+ delete ob4,ob5
+
+ Generation 2: ob3
+
+ Unit testing :
+
+ - test if the code is working fine or not
+ - use some TEST CASES (sample data) to check the code
+ 
+ 2 values :
+ - Pass : actual output meets the expected output
+ - Fail : does  not meet the expected output 
+
+ Why ??
+ - Check for errors \ bugs ---> more reliable code
+ - Software documentation 
+
+
+ Unit testing tools:
+ -MSTest
+ -Xunit
+ -Nunit 
+
+ Testing process:
+
+ - AAA
+ A- Arrange - Identify the unit of testing
+ A - Act - pass test values
+ A - Assert - check if AO = EO
+
+ SOLID Design pattern :
+
+ S - Single responsibility principle
+ O - Open / closed principle
+ L - Liskov's substitution principle
+ I - Interface segregation principle
+ D - Dependency Inversion principle
+
+ S - Single responsibility 
+
+ Each and every module has only one reason to behave 
+
+ Open / Closed Principle :
+
+ Should be open to extension,but CLOSED for modification
+
+ Liskov's substitution principle :
+
+ - parent class car (show) ---> child class ford(display)
+
+ cc obj1=new cc();
+ cc.show();
+ cc.display();
+
+ - Interface Segregation Principle
+ clients should not be forced to use the method
+ They use the method only when it is absolutely required
+ fat interface : having all methods in one place
+ thin interface : create smaller interfaces with a unit of work
+ 
+ Dependency Inversion Principle:
+
+ - Loosely coupled code
+ - We will create an variable for the interface that will access the methods of the class
+
+
+
+ ???
+
+
+ client ---->Interface ---> access the methods of the Class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

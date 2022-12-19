@@ -1,0 +1,47 @@
+
+
+Agenda :
+
+- File API
+
+* Stream reader and stream writer
+* Text reader and text writer
+* Binary reader and binary writer
+* string builder class
+
+- Date and time API
+
+- Introduction to Threading
+* what is thread ?
+* thread states ?
+* how to create a thread and assign name to it ?
+
+Stream : data flow for reading and writing a file
+
+StringBuilder : write the content in memory
+
+Date and time API :
+
+Methods and properties that could retrieve the date and time information from the system.
+
+Thread :
+
+- light weight process
+- code of execution
+- one thread executes one job at a time
+
+Synchronous : thread1(work1 ----> work2--->work3.....(Time consuming and not efficient))
+Asynchronous : all the task that runs in parallel
+work1 --thread1
+work2---thread5
+work3---thread3
+
+Multithreading : many tasks / jobs / work run at the same time
+
+Lifecycle : (Stages of the thread)
+
+1.Unstarted - thread is created,execution not started
+2.Started - start()
+3.Running 
+4.Not runnable - operation is blocked wait(),sleep()
+5.Dead - thread is terminated

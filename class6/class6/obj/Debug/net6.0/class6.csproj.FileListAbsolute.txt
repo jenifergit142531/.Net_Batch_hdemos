@@ -1,0 +1,15 @@
+C:\demo\class6\class6\bin\Debug\net6.0\class6.exe
+C:\demo\class6\class6\bin\Debug\net6.0\class6.deps.json
+C:\demo\class6\class6\bin\Debug\net6.0\class6.runtimeconfig.json
+C:\demo\class6\class6\bin\Debug\net6.0\class6.dll
+C:\demo\class6\class6\bin\Debug\net6.0\class6.pdb
+C:\demo\class6\class6\obj\Debug\net6.0\class6.csproj.AssemblyReference.cache
+C:\demo\class6\class6\obj\Debug\net6.0\class6.GeneratedMSBuildEditorConfig.editorconfig
+C:\demo\class6\class6\obj\Debug\net6.0\class6.AssemblyInfoInputs.cache
+C:\demo\class6\class6\obj\Debug\net6.0\class6.AssemblyInfo.cs
+C:\demo\class6\class6\obj\Debug\net6.0\class6.csproj.CoreCompileInputs.cache
+C:\demo\class6\class6\obj\Debug\net6.0\class6.dll
+C:\demo\class6\class6\obj\Debug\net6.0\refint\class6.dll
+C:\demo\class6\class6\obj\Debug\net6.0\class6.pdb
+C:\demo\class6\class6\obj\Debug\net6.0\class6.genruntimeconfig.cache
+C:\demo\class6\class6\obj\Debug\net6.0\ref\class6.dll

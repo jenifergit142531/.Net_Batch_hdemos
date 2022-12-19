@@ -1,0 +1,92 @@
+
+
+Agenda :
+
+Generics
+
+* Sorted set
+* Linked List
+* Dictionary
+* Sorted Dictionary
+
+File IO
+
+- Byte Reader / Byte Writer
+- Stream reader / stream writer
+- Text reader / Text writer
+- Binary reader / Binary writer
+
+Sorted set :
+
+Sort the data in an orderly way
+- Sytem.collections.Generic
+- Elements must be unique
+- by default,sorted in ascending order
+- Maintain elements with same data type
+
+methods :
+clear()
+remove()
+contains()
+
+
+Linked List:
+
+-Linear data structure
+- Group of nodes in sequence
+- Each node has two parts
+1.Data : store the value
+2.next : hold the address pointing to the next element
+
+Advantage :
+- Dynamic in nature
+- allocate the memory as and when required
+- easy to insert / delete the value
+
+Types :
+
+- singly linked list : head ----------> node1[data-next] ---->node2----.....
+
+- Doubly linked list : 
+
+prev-data-next ----> prev-data-next----->prev-data-next
+
+- circular linked llist
+
+
+head ----> node1---->node2
+<---------------------------
+
+
+
+Dictionary :
+
+- generic collection
+- contains elements with same data type
+- stored as " Key - value " pair
+- Key must be unique 
+- Key cannot be duplicate
+- values can be repeated / duplicated
+- by using keys ,you will retrieve the value
+
+Sorted dictionary :
+
+- Keys are sorted and stored 
+
+
+
+FILE IO:
+- Collection of data
+Read : reads the data
+Write : write the content to the file
+Append : add the content to the existing file
+
+
+Stream : flow of data 
+
+Input stream: reading data from the file
+Output stream : writing data to the file 
+
+
+
+
