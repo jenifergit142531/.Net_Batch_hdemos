@@ -1,0 +1,237 @@
+
+
+Agenda :
+
+- Joins
+- union
+- Subquery
+
+
+Join :
+
+- Combining rows from one or more tables based on related column
+
+select row1,row2,....
+from table1
+Join
+table2
+on table1.pk_key=table2_fk
+
+Types of Joins:
+
+- INNER JOIN - Return the records that have matching values in both tables
+- LEFT (OUTER) JOIN - retrieve all records from the left table and matching record from the right table
+- RIGHT (OUTER) JOIN - retrieve all records from the right table and matching record from the left table
+- FULL (OUTER) JOIN - retrieve all records from both tables
+
+Subquery  :
+
+- query within another query
+
+outer query \ mainquery ( inner query \ subquery)
+
+inner query : this will be evaluated first 
+outer query : uses the output of inner query to evaluate another condition
+
+select columnname..
+from tablename
+where expression
+( select colname from tablename where ...)
+
+Functions :
+
+-  set of sql statementsa that performs some tasks
+- perform some logic 
+- Must return a value 
+
+Build in functions
+
+len(),round(),LCASE(),Ucase(),sum(),avg(),max(),min()
+
+User defined functions :
+
+- you need to write the logic / customize the logic for your table
+
+two types:
+
+- scalar value function - returns only ONE VALUE 
+- Table value function - return the result set in the form of table 
+
+create function functionname()
+returns <value>
+as
+begin
+//statement
+end
+
+
+
+Queries :
+
+
+-- creating two tables moviedetails & bookingdetails
+
+create table moviedetails(mid int primary key not null,moviename varchar(25),director varchar(20),genre varchar(20))
+
+create table bookingdetails(bid int primary key not null,bookingname varchar(20),
+theatrelocation varchar(20),showtime datetime,ticketprice money,
+movieid int foreign key references moviedetails(mid) on delete cascade 
+on update cascade)
+
+create table paymentstatus (transactionid int primary key not null,status varchar(150),bookingid int foreign key 
+references bookingdetails(bid) on delete cascade
+on update cascade)
+
+
+-- Insert values in both the tables
+
+insert into moviedetails(mid,moviename,director,genre)
+values
+(1,'tenet','nolan','sci-fic'),
+(2,'avatar','cameron','sci-fic'),
+(3,'inception','nolan','sci-fic'),
+(4,'annabell','someone','horror')
+
+insert into bookingdetails(bid,bookingname,theatrelocation,showtime,ticketprice,movieid)
+values
+(101,'Jenifer','OMR','2022-12-20 03:05:00',150,2),
+(102,'Mitra','ECR','2022-12-21 10:00:00',300,1),
+(103,'Thamira','vrmall','2022-12-22 12:30:00',400,4),
+(104,'Rahul','phoenix','2022-12-23 4:00:00',500,4)
+
+insert into paymentstatus(transactionid,status,bookingid)
+values
+(0001,'Booking successfull',102),
+(0002,'Payment unsuccessfull',101),
+(0003,'Booking successful',103)
+
+
+-- select the tables
+
+select * from moviedetails
+select * from bookingdetails
+select * from paymentstatus
+
+-- simple join queries
+-- INNER JOIN
+
+select md.moviename,md.director,bd.bookingname,bd.theatrelocation,bd.showtime,bd.ticketprice
+from
+moviedetails md
+inner join
+bookingdetails bd
+on
+md.mid=bd.movieid
+
+-- left (outer) join 
+
+select md.moviename,md.director,bd.bookingname,bd.theatrelocation,bd.showtime,bd.ticketprice
+from
+moviedetails md
+left join
+bookingdetails bd
+on
+md.mid=bd.movieid
+
+-- right (outer) join 
+
+select md.moviename,md.director,bd.bookingname,bd.theatrelocation,bd.showtime,bd.ticketprice
+from
+moviedetails md
+right join
+bookingdetails bd
+on
+md.mid=bd.movieid
+
+-- full (outer) join
+
+select md.moviename,md.director,bd.bookingname,bd.theatrelocation,bd.showtime,bd.ticketprice
+from
+moviedetails md
+full join
+bookingdetails bd
+on
+md.mid=bd.movieid
+
+-- complex join queries
+-- combine multiple tables
+
+select md.moviename,bd.bookingname,ps.status
+from moviedetails md
+inner join
+bookingdetails bd on md.mid=bd.movieid
+left join
+paymentstatus ps on bd.bid=ps.bookingid
+order by md.moviename asc;
+
+-- subquery
+
+-- find the booking names whose ticket price is greater than mitra 
+
+select bookingname,showtime
+from bookingdetails
+where ticketprice > 
+(select ticketprice from bookingdetails where bookingname='mitra')
+
+
+-- inserting / copying values into another table
+
+create table newtable(mid int,mname varchar(25),director varchar(20),category varchar(20))
+
+insert into newtable 
+select * from moviedetails
+
+select * from newtable
+select * from moviedetails
+
+
+-- deleting 
+
+delete from newtable
+where mid in
+(select mid from moviedetails where director='nolan')
+
+-- Updating
+
+update newtable
+set mname='connect'
+where director in (select director from moviedetails where moviename IN ('someone','annabell'));
+
+
+--built in functions
+
+select GETDATE() as 'Today'
+
+-- user defined functions 
+
+-- scalar function
+
+create function avgticketprice()
+returns int
+as
+begin
+declare @avgtp int
+set @avgtp=0
+select @avgtp = avg(ticketprice) from bookingdetails
+return @avgtp
+end
+
+select dbo.avgticketprice() as ticketprice
+
+
+-- scalar function with parameter
+
+create function checkprice(@number int)
+returns int
+as
+begin
+declare @checktp int
+set @checktp=0
+select @checktp = count(ticketprice) from bookingdetails where ticketprice > @number
+return @checktp
+end
+
+
+select dbo.checkprice(250) as 'checkprice'
+
+
