@@ -1,0 +1,99 @@
+Read :
+
+public static void GetMovieList()
+        {
+            //creating the connection
+            SqlConnection con = new SqlConnection("");
+            // create the command
+            SqlCommand cmd = new SqlCommand("select * from moviedetails", con);
+
+            //open the connection
+            con.Open();
+
+            //Process the query
+
+            SqlDataReader sdr = cmd.ExecuteReader();
+
+            while(sdr.Read())
+            {
+                Console.WriteLine(sdr["mid"] + "=>" + sdr["moviename"] + "=>" 
+                   + sdr["director"] + "=>" + sdr["genre"]);
+
+            }
+
+            //close the connection 
+            con.Close();
+
+        }
+        
+       Create : 
+       
+       public static void InsertMovieList()
+        {
+            //creating the connection
+            SqlConnection con = new SqlConnection("");
+            // create the command
+            SqlCommand cmd = new SqlCommand("insert into moviedetails(mid,moviename,director,genre) values (202,'Avengers','xxx','action')", con);
+
+            //open the connection
+            con.Open();
+
+            //Process the query
+
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("Movie detail is successfully inserted");
+            
+
+            //close the connection 
+            con.Close();
+
+        }
+        
+        Update :
+        
+        public static void UpdateList()
+        {
+            //creating the connection
+            SqlConnection con = new SqlConnection("");
+            // create the command
+            SqlCommand cmd = new SqlCommand("update moviedetails set director='steven' where mid = 202", con);
+
+            //open the connection
+            con.Open();
+
+            //Process the query
+
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("Movie detail is successfully updated");
+
+
+            //close the connection 
+            con.Close();
+
+        }
+    }
+    
+    Delete :
+    
+    public static void DeleteList()
+        {
+            //creating the connection
+            SqlConnection con = new SqlConnection("Data Source=REV-PG02C4Y5;Initial Catalog=HCL_DB;Integrated Security=True");
+            // create the command
+            SqlCommand cmd = new SqlCommand("delete from moviedetails where mid = 202", con);
+
+            //open the connection
+            con.Open();
+
+            //Process the query
+
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("Movie detail is successfully deleted");
+
+
+            //close the connection 
+            con.Close();
+
+        }
+    }
+}
