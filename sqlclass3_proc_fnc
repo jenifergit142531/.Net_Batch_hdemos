@@ -1,0 +1,140 @@
+Advantages of stored procedure :
+- prevents sql injection
+- call a function from stored procedure 
+- using try...catch block for handling exception 
+- procedure can be encrypted
+- you can also perform insert,update,delete in stored procedure
+
+
+
+-- user defined function
+
+-- scalar valued function
+
+alter function calculate()
+returns int
+as
+begin
+declare @price int
+declare @numberofperson int
+set @price=0
+set @numberofperson=5
+select @price = max(ticketprice)*@numberofperson from bookingdetails
+return @price
+end
+
+
+-- execute the function
+
+select dbo.calculate()
+
+--table valued function
+
+alter function getBookinglist(@data int)
+returns table
+as
+return(select * from bookingdetails where ticketprice > @data)
+
+
+select * from getBookinglist(400)
+
+-- Stored procedure
+-- set of T-sql statements that does some task
+-- does not return a value
+-- it will use output parameter to display the result
+
+alter procedure sp_movielist
+with encryption  -- encrypt the stored procedure -- optional one
+as
+begin
+select * from moviedetails
+end
+
+
+-- execute the stored procedure
+
+exec sp_movielist
+
+-- find the procedure details
+sp_helptext sp_movielist
+sp_help sp_movielist
+
+-- call a function from stored procedure
+
+create procedure callmybooking
+as
+begin
+select dbo.avgticketprice()
+end
+
+exec callmybooking
+
+-- use try...catch block for procedure
+
+alter procedure sp_excep(@id int)
+as
+begin
+begin try
+delete from product where pid=@id
+end try
+begin catch
+select 
+ERROR_MESSAGE() as Errormessage,
+ERROR_SEVERITY() as severity,
+ERROR_LINE() as linenumber;
+end catch
+end
+
+exec sp_excep 101
+
+create table product(pid int primary key,pname varchar(25),price int)
+create table customer(cid int primary key,numberrequired int,pid int foreign key references product(pid))
+
+
+insert into product
+(pid,pname,price)
+values
+(101,'Iphone',75000),
+(102,'mouse',45000)
+
+insert into customer
+(cid,numberrequired,pid)
+values
+(1,5,101),
+(2,5,102)
+
+select * from product
+select * from customer
+
+-- procedure for insert operation
+
+create procedure sp_productinsert
+(@id int,
+@name varchar(20),
+@price int)
+as
+begin
+insert into product
+(pid,pname,price)
+values
+(@id,@name,@price)
+end
+
+exec sp_productinsert
+@id=103,
+@name=macbook,
+@price=120000
+
+select * from product
+
+-- procedure for updating the product
+
+alter procedure sp_updateproduct
+(@id int,@price int = 145000)
+as
+begin
+update product set price=@price
+where pid=@id
+end
+
+exec sp_updateproduct 103
