@@ -1,0 +1,30 @@
+using System.Threading;
+class Program
+{
+    public static void billingCounter(object obj)
+    {
+        for (int i = 1; i <= 3; i++)
+        {
+            Console.WriteLine("Inside billing counter" + i);
+            
+        }
+    }
+
+    static void shop()
+    {
+        
+        ThreadPool.QueueUserWorkItem(new WaitCallback(billingCounter));
+        Console.WriteLine(ThreadPool.ThreadCount);
+
+    }
+        
+        
+        public static void Main(string[] args)
+    {
+        
+        
+        shop();
+    
+    }
+}
+
