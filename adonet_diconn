@@ -1,0 +1,81 @@
+
+
+
+using System.Data;
+using System.Data.SqlClient;
+
+class Program
+{
+    public static void DeleteStudent()
+    {
+        string conString = "Data Source=REV-PG02C4Y5;Initial Catalog=HCL_DB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False";
+
+        using (SqlConnection con = new SqlConnection(conString))
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            string selectquery = "select * from student";
+            adapter.SelectCommand = new SqlCommand(selectquery, con);
+
+        }
+    }
+
+    public static void InsertStudent(DataTable dt)
+    {
+        string conString = "Data Source=REV-PG02C4Y5;Initial Catalog=HCL_DB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False";
+
+        using (SqlConnection con = new SqlConnection(conString))
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            string insertquery ="insert into student(sid,sname,grade,mailid,phoneno) values(@id,@name,@grade,@mailid,@phoneno); ";
+            adapter.InsertCommand = new SqlCommand(insertquery, con);
+            adapter.InsertCommand.Parameters.Add("@id", SqlDbType.Int, 8, "sid");
+            adapter.InsertCommand.Parameters.Add("@name", SqlDbType.NVarChar, 50, "sname");
+            adapter.InsertCommand.Parameters.Add("@grade", SqlDbType.Int, 8, "grade");
+            adapter.InsertCommand.Parameters.Add("@mailid", SqlDbType.NVarChar, 50, "mailid");
+            adapter.InsertCommand.Parameters.Add("@phoneno", SqlDbType.NVarChar, 50, "phoneno");        
+            adapter.Update(dt);
+            Console.WriteLine("successfully inserted the values");
+
+        }
+    }
+    public static void Selectstudent()
+    {
+      string conString = "Data Source=REV-PG02C4Y5;Initial Catalog=HCL_DB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False";
+
+       using (SqlConnection con=new SqlConnection(conString))
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            string selectquery = "select * from student";
+            adapter.SelectCommand = new SqlCommand(selectquery, con);
+            //DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            //adapter.Fill(ds);
+            adapter.Fill(dt);
+           // foreach(DataRow dr in ds.Tables[0].Rows)
+           foreach(DataRow dr in dt.Rows)
+            {
+                Console.WriteLine(dr[0] + "=>" + dr[1] + "=>" + dr[2] + "=>" + dr[3] + "=>" + dr[4]);
+            }
+        }
+    }
+    public static void Main(string[] args)
+    {
+        DataTable dt = new DataTable("student");
+
+        DataColumn id = new DataColumn("sid");
+        dt.Columns.Add(id);
+        DataColumn name = new DataColumn("sname");
+        dt.Columns.Add(name);
+        DataColumn grade = new DataColumn("grade");
+        dt.Columns.Add(grade);
+        DataColumn mailid = new DataColumn("mailid");
+        dt.Columns.Add(mailid);
+        DataColumn phoneno = new DataColumn("phoneno");
+        dt.Columns.Add(phoneno);
+
+        dt.Rows.Add(201, "steven", 1, "steven@gmail.com", "12456");
+        InsertStudent(dt);
+   
+        Selectstudent();
+    }
+}
