@@ -1,0 +1,115 @@
+
+Agenda :
+
+- HTML Introduction
+- HTML tags : <h1>,<p>,<br>,<hr>,<a>,<img>,<div>,<span>
+- paired and unpaired tags
+- inline vs block level elements
+- html tables
+- html lists
+- html forms
+
+
+HTML - Hyper text markup language
+- creating the web page
+- define the structure of the web page 
+- standard markup language 
+- consist of series of elements
+- html is not case sensitive
+
+
+HTML Structure :
+
+<!DOCTYPE html> - defines the document in the html5 document
+<html> - root element 
+<head> - contains meta information
+<title> - specify the title for your web page
+<body> - defines the html document body and act as container to hold other html elements
+<h1> ....<h6> : header tag
+<p>- paragraph
+
+
+HTML Attributes :
+
+<a href="link" />
+
+- allows to navigate through the pages
+- href : attribute that hold the web page link / name 
+
+list : store the data in some ordered manner
+ 
+ - ordered list (1,2,3..)
+ (a,b,c,..)
+ (i,ii,iii...)
+
+ - unordered list : specify the shapes(round,square..)
+ - Description list : 
+ tea
+ milk tea
+ black tea
+
+ <dl> - description list
+ <dt> - descripion term (grouping the items)
+ <dd> - describes the value
+
+ block and inline elements:
+
+ Block element :
+
+ - always starts on the new line
+ - browser adds the margin spaces automatically
+ - takes up the full width of the screen
+
+ <p>
+ <div>
+ <address>
+ <article>
+ <form>
+ <table>
+
+ inline elements:
+ - starts on the same line
+ - takes only width as much is necassary
+ <label>
+ <a>
+ <img>
+ <sup>
+ <sub>
+
+ Tables:
+
+ - data stored in rows and columns
+
+ <table>
+ <tr> - table row
+ <td> - table data 
+ <th> - table header 
+
+ <style>
+ table{
+
+ }
+</style>
+
+border
+width
+height
+padding 
+
+Form :
+
+- collect the user informations
+- this input is processed by your server 
+<form>
+
+<input>  elements - enter the user input
+<input type="text"> - input the text data
+radio - choose only one value
+checkbox - choose multiple options 
+submit - submitting the form to the server
+button - clickable button 
+
+<label> - some info about your form
+<textarea> - accept multiple lines of text
+
+
