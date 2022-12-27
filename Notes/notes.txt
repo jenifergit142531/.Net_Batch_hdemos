@@ -1,0 +1,74 @@
+
+
+Agenda : Css - Cascading style sheet
+
+- CSS Box model
+- CSS Syntax 
+- Inline , Internal ,External
+- CSS properties
+* color
+* borders
+* margins
+* padding
+- CSS Selector - VI
+- Bootstrap 
+
+- Javascript
+* Introduction / Installation
+* variables
+* Datatypes
+* Operators
+
+
+CSS:
+
+- Cascading style sheet
+- Used to style your webpages
+- Problems ( css in html)
+* hard to manage the code 
+* difficulty in debugging the code
+* increase  in duplication of Datatypes
+- seperation of concern in the design and style
+- modern,responsive,mobile supported
+- all browsers :chrome,firefox,edge..
+- devices : desktop,laptop,tablet...
+
+- External Stylesheet :
+
+<link rel="stylesheet" href="bms.css">
+Style sheet is stored as a seperate file whose link is included to the web pages.
+
+- Internal stylesheet:
+
+Specific to a single web pages
+<style>
+ body{
+    background-color:yellow;
+}
+</style>
+
+- Inline stylesheet :
+
+Specific to an element inside the web page.
+
+<h1>
+<a>
+<div>
+
+<div style="background-color: yellow;">
+    This is my paragraph 2
+   </div>
+    
+
+CSS Selector :
+
+select the html elements that you want to style
+
+1.# - select the element based on id="firstname"
+
+#firstname
+
+2..class - select all the elements with class
+3.element.class- select element that belongs to a single class
+4.* - select all elements
+5. element - select only elements

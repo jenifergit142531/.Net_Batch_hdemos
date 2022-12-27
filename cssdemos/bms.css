@@ -1,0 +1,44 @@
+
+h1{
+    color:red;
+}
+
+.myclass
+{
+    font-style: italic;
+    color: blueviolet;
+}
+
+*
+{
+    text-align: center;
+    
+}
+p.myclass
+{
+    color:brown;
+}
+
+#lb1
+{
+    color:hotpink;
+}
+
+
+/*body{
+    background-color: aliceblue;
+}
+p{
+  text-align: justify;   
+  color: red;
+}
+h1{
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+div{
+    width:180px;
+    border:10px solid black;
+    margin:50px;
+    float:left;
+}
+*/
