@@ -1,0 +1,58 @@
+
+Agenda :
+
+- Introduction to JS
+- Variables 
+- Datatypes
+- comments
+- var,let and const keywords
+- Operators
+- Branching / Looping / Switch case
+- Functions
+- Anonymous funcions
+- Arrays
+
+Javascript :
+
+- Programming language that is used for the web application
+
+HTML : Structure / content of the page
+CSS : Styling the web page
+JS : Behaviour of the web page
+
+Variable : memory location to store the value
+
+Datatypes:
+
+var - can be reclared and updated 
+let - cannot be reclared but it can be updated
+const - cannot be reclared and updated
+
+functions :
+
+- perform set of tasks
+
+function fn_name(parameters)
+{
+    //code here
+}
+
+conditional construct : evaluates multiple conditions
+
+if 
+if- else
+if - else if
+
+switch - performs actions based on different conditional
+
+switch(expression)
+{
+    case 1:
+    //code
+    break;
+    case 2:
+
+
+    default:
+    //code
+}
