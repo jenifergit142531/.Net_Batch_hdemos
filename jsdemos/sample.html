@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <div class="c1">
+
+        This is getElementsByClassName
+    </div>
+
+    <script>
+
+        var oldArray=[65,55,12,4];
+      //create a new array from existing array based on condition = map
+        var newArray=oldArray.map(myfunction); 
+
+      //checks each element in the given array upon the condition = filter
+        var evenArray = oldArray.filter(item=>item%2==0);
+
+      // reduce the array of values down to one value  = reduce
+        var sum = oldArray.reduce(function(result,item)
+        {
+            return result +item;
+        },0);
+        
+        
+       document.getElementById("p1").innerHTML=newArray;
+       document.getElementById("p2").innerHTML=evenArray;
+       document.getElementById("p3").innerHTML=sum;
+       var x = document.getElementsByClassName("c1");
+       document.write(x+newArray);
+        function myfunction(number)
+        {
+            return number * 10;
+        }
+        
+        
+        
+    </script>
+</body>
+</html>

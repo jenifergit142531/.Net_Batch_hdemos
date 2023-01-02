@@ -1,0 +1,51 @@
+
+
+Agenda :
+
+- OOP 
+* Class
+* object
+* Variable hoisting
+* Function hoisting
+* Constructor
+* ForEach Loop
+* GetElementById
+* GetElementByClass
+* Array functions : Filter,map,reduce
+
+
+OOP : Pizza
+
+Object : Unique entity 
+* that contains properties and methods
+
+Class : Blue print of the object
+- collection of objects
+
+Encapsulation : Wrapping the properties + functions in single unit
+
+Abstraction : shows necessary details and hides the background info
+
+Inheritance : acquire properties from base class -----> derived class
+
+Polymorphism : Many forms
+
+* object behaves differently based on diff inputs / scenarios
+
+
+Constructor : 
+
+- Special function that intializes the object 
+
+constructor(parameters)
+{
+    //code initialise
+}
+
+
+Hoisting : Make the declarations before using the variables/functions
+
+- always move the declaration to the top of the block code.
+
+
+
