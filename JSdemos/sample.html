@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="button" ondblclick="message()" value="greetings" />
+    <button id="bt1">click me</button>
+    <input type="text" id="t1" onkeydown="keydown()"/>
+    <input type="button" onclick="hello()"/>
+    <input type="button" onclick="even()" value="Find even"/>
+
+    <script>
+        function message()
+        {
+            document.write("Welcome to events");
+        }
+
+
+
+            function changeColor()
+            {
+                document.write("Change color");
+                bt1.style.color="red";
+                bt1.style.background="yellow";
+            }
+
+            //EVENT LISTENER
+            var btn=document.getElementById("bt1");
+            btn.addEventListener("keydown",changeColor);
+
+            function keydown()
+            {
+              
+                alert("key pressed");
+            }
+
+            hello = () =>{
+            alert ("hello all");
+            }
+
+           even =() =>{
+            var myArray=[10,23,46,21,65];
+            newArray = myArray.filter(item => item %2==0)
+            document.write(newArray);
+
+           }
+           
+    </script>
+    
+
+
+</body>
+</html>

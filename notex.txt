@@ -1,0 +1,101 @@
+
+
+Agenda :
+
+- Event
+- Event Listener
+- Arrow functions
+- ES 6 Features
+- JS Promises
+- Async and Await
+
+Event :
+
+- some actions performed by the user / browser
+- Changes in the state of the object => Event (definition)
+
+Event handling :
+
+- process of responding to the event is event handling 
+
+events :
+
+click
+mouseover
+focus
+keydown
+keyup
+double click
+onload
+onresize
+
+Event Listener :
+
+- it is used to attach the event handler with the method.
+
+Arrow function :
+
+=>
+
+left side (inputs) => right side (expression)
+
+eg :
+
+item => item %2==0
+
+
+Javascript Callbacks :
+
+" I will call back later "
+
+- a call back is a function that is passed as argument to another function
+
+Promises :
+
+" I PROMISE A RESULT"
+
+Producer - produce the code 
+Consumer -  waits for the result
+
+Promise is an object that links the request and response
+
+Promise object properties :
+
+State                           result
+"Pending"                       undefined
+"fulfilled"                     result 
+"rejected"                      error
+
+XMLHTTPREQUEST : Object is used to request the data from the server 
+- Built in object 
+
+Async and Await :
+
+Async = makes a function to return a promise
+Await = wait for the promise
+
+
+ES 6 Features :
+
+ECMA SCRIPT  - Language specification standard
+
+class and object 
+arrow function
+Promises
+multiline string
+
+var x="jlj"
+ES6 var x = `hkoljfeglo;rk
+ugkheglj`
+
+Literals
+
+${obj.variable}
+
+Enhanced object literal : passing values to method 
+
+display("hello")
+
+
+
+

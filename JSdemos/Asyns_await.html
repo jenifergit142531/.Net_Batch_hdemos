@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <script>
+        async function getFile()
+        {           
+        let mypromise=new Promise(function(resolve)
+      {
+        let req=new XMLHttpRequest();
+        req.open('GET',"one.html");
+        req.onload=function(){
+            if(req.status==200)
+            {
+                resolve(req.response);
+            }
+            else
+            {
+                resolve("File not found");
+            }
+        };
+        req.send();
+      });
+        
+        document.getElementById("p1").innerHTML=await mypromise;
+    }
+
+    getFile();
+    </script>
+
+
+</body>
+</html>

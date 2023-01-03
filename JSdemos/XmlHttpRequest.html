@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <script>
+      function display(some)
+      {
+        document.getElementById("p1").innerHTML=some;
+      }
+      let mypromise=new Promise(function(resolve,reject)
+      {
+        let req=new XMLHttpRequest();
+        req.open('GET',"one.html");
+        req.onload=function(){
+            if(req.status==200)
+            {
+                resolve(req.response);
+            }
+            else
+            {
+                reject("File not found");
+            }
+        };
+        req.send();
+      });
+
+      mypromise.then(
+        function(value){display(value);},
+        function(error){display(error);}
+      )
+    </script>
+</body>
+</html>
+
+
