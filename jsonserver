@@ -1,0 +1,72 @@
+
+
+Installation :
+
+Node : 
+https://nodejs.org/en/download/
+node -v
+
+npm :
+npm install -g npm
+npm -v
+
+jsonserver :
+
+npm install -g json-server
+
+Create Json file : Movie.json
+
+{
+  "movie": [
+    {
+      "id": 1,
+      "mname": "Avatar",
+      "price": "250"
+    },
+    {
+      "mname": "connect",
+      "price": "500",
+      "id": 2
+    },
+    {
+      "mname": "tenet",
+      "price": "250",
+      "id": 3
+    }
+  ]
+}
+
+
+- run the server 
+
+json-server --watch Movie.json
+
+
+- Open new terminal and execute the crud commands 
+
+GET :
+curl -X GET -H "Content-Type: application/json" "http://localhost:3000/movie"
+curl -X GET -H "Content-Type: application/json" "http://localhost:3000/movie/1"
+
+
+DELETE:
+curl -X DELETE -H "Content-Type: application/json" "http://localhost:3000/movie/3"
+
+PUT(Update):
+curl -X PUT -H "Content-Type: application/json" -d '{"mname":"connect","price":"500"}'
+ "http://localhost:3000/movie/2"
+
+POST(Insert):
+ curl -X POST -H "Content-Type:application/json" -d '{"mname":"tenet","price":"250"}' "http://localhost:3000/movie"
+
+
+
+
+
+
+
+
+
+
+
+
