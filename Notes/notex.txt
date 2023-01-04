@@ -1,0 +1,103 @@
+
+
+Agenda :
+
+- Introduction to Typescript
+- Advantages
+- Declare variables
+- Data types in Typescript
+- Scope
+- Access modifiers
+- Classes
+- Encapsulation
+- Abstraction
+- Interfaces
+
+
+Environment setup :
+
+- node.js(https://nodejs.org/en/download/)
+- npm (npm install -g npm)
+- npm install -g typescript
+- Version : npx tsc
+
+
+Angular installation :
+
+npm install -g @angular/cli
+
+version:
+
+ng version
+ng v
+
+
+Introduction :
+
+Typescript : Typed Javascript
+
+- Open source programming language
+- superset of the Javascript
+- Browser support , any OS,any environment that JS runs
+
+compile :
+
+ts ---> ts compiler(tsc filename.ts)--->generate a js file[js]
+
+run :
+
+node filename.js (view output on the terminal)
+
+
+Advantage :
+
+- Identifying bugs at compile time rather instead of run time
+- Improves the productivity
+- Easy to use
+
+Disadvantage :
+
+- cannot execute alone
+- It needs to be converted or compiled to Js file for execution
+- It may increase the compile time
+
+
+Data Types:
+
+- Simple data types - number,string,boolean
+- Special data types - any,undefined,unknown,never,null
+- Object types
+- Arrays
+- Enums
+
+
+Variable declaration :
+
+var variablename:datatype
+
+var a: string;
+var a: string = "hello"
+var[a]:[string];
+var[a]="hello"
+var[a];
+
+Rules :
+- cannot start with special characters 
+- Begin with alphabets
+- cannot contain spaces,special characters except the _ underscore symbol
+
+
+Hoisting variable : 
+
+- declare the variable at the top / before any code
+
+Scoping :
+
+- var : global scope(reclared and updated)
+- let : block scoped ( cannot be reclared but can be updated)
+
+Access modifiers :
+
+- public - accessible anywhere
+- private - only inside the class / declaration
+- protected - only by the inherited subclasses
