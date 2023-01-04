@@ -1,0 +1,25 @@
+square table :
+
+var fs=require('fs');
+var data={}
+data.table=[]
+for(i=0;i<26;i++)
+{
+    var obj={
+        id:0,
+        square:i*i
+    }
+    data.table.push(obj)
+}
+fs.writeFile("read2.json",JSON.stringify(data),function(err){
+    if(err) throw err;
+    console.log("complete");
+});
+
+
+readfile:
+const fs=require("fs");
+//onst prompt=require("prompt-sync");
+var data=fs.readFileSync("student.json");
+var obj=JSON.parse(data);
+console.log(obj);
