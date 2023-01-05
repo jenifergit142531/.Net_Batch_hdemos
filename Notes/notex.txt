@@ -1,0 +1,110 @@
+
+
+Agenda : Angular
+- Introduction
+- Single page application
+- Environment setup 
+- Angular cli commands 
+- Understanding the folder structure
+- Angular build 
+* Web pack bundling
+* Minification
+- Working with angular cli
+- Adding angular material / bootstrap on the angular application
+
+Introduction :
+
+Angular is a front end framework.
+React as a library
+
+
+framework vs library :
+
+asp.net is a framework
+ado.net is a library
+
+Framework : Platform that allows you code you create programs
+
+Use :
+
+- Create a interactive web pages
+- Dynamic web pages
+
+Single page application :
+
+- It will render only the part of the web page 
+- Cost effective / time effective 
+- Faster application 
+- Gmail,Google map,netflix,facebook,twitter etc
+
+Advantage :
+- Fast and responsive
+- Linear user experience 
+- Debugging is easier 
+
+Disadvantages :
+
+- Security issue(cross - site scripting XSS)
+- Memory consumption - run it for hours
+
+Environment setup :
+- Node installation
+nodejs.org
+
+- npm installation
+npm install -g npm
+
+- Angular installation
+
+npm install -g @angular/cli
+
+cli commands :
+
+- ng help
+- bg version
+- npm install -g @angular/cli@latest   [installing / updating to latest version]
+- ng new app-name
+
+Folder structure :
+.vscode : contains launch url ,configuration info
+node _modules : contains the packages
+src : source folder of the application
+app: application folder
+* contains component(html,css,ts),routing module,appmodule,test file(spec.ts)
+assest folder : it will contain static data.
+->images
+->files
+->logos
+fav.ico => angular icon file that displays on the browser
+index.html : starting point of your application (rendered on the browser)
+main.ts : entry point of the application.Like main()
+#styles.css : global styles
+.editorconfig : set up the team environment.Create coding standards for the developers.
+.gitignore : files that you want to ignore in the git repository
+angulatr.json : configuration of your angular project
+package-lock : contains dependency , libraries 
+package.json : mandatory file in npm project.It contains application specific information.
+tsconfig.app.json : used during the compilation of the application.This contains configuration 
+information about how your application can be compiled.
+tsconfig.json: typescript compilation related options
+tsconfig.spec.json : details of testing
+
+Angular material :
+
+- UI Component library for designing angular application
+- npm install @angular/material @angular/cdk @angular/animations --save
+- ng add @angular/material
+
+
+
+
+
+
+
+
+
+
+
+
+
+
