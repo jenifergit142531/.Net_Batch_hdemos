@@ -1,0 +1,21 @@
+table,tbody{
+    border:1px solid brown;
+    margin:3px;
+    border-radius: 15px;
+}
+td{
+    border: 1px solid brown;
+    
+
+}
+thead{
+    border: 1px solid brown;
+}
+
+.colorClass
+{
+    color:Red;
+    background-color: yellowgreen;
+    font-style: italic;
+    font-weight: bold;
+}

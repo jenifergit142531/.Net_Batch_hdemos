@@ -1,0 +1,78 @@
+Agenda :
+
+- Decorator
+- Template and Template URL
+- Module
+- Component
+- Data Binding
+- Services
+
+Decorators :
+
+- @ 
+- Change the behaviour of the angular element
+
+@NgModule - defines a Module
+@Component - Defines a Component
+@Injectable - define Services
+@Input and @Output - define properties 
+
+Template and TemplateURL:
+Template : Inline html elements
+TemplateURL : Maintain seperate html file for holding multiple html elements
+
+
+Module :
+
+- It is a container
+- that contains components,services,directives,pipes.
+ ng generate m ticket
+ ng g m ticket
+
+ Component :
+
+ - reusable UI building blocks of the application.
+ - reusable view 
+
+ 1.class(Typecript class : define properties and methods)
+ 2.Template(HTML Template , template url , styleurl)
+ 3.Decorator (@component)
+
+ - selector : name of the component 
+
+ ng generate component home
+ ng g c home
+
+ summarize :
+ module : collection of components
+ component : html + css + logic(ts file)
+
+ Data binding :
+
+
+ pass data between class(component body)----> html ,html --->class
+
+Types
+
+1.One way data binding
+* source to view
+- String interpolation  {{variable/method}}
+- Property binding : bind to the property of the html element [propetyname]
+- Attribute binding : 
+
+
+
+
+* view to source
+Event Binding
+
+2.Two way data binding
+[(ngModel)]
+
+
+Services :
+
+- Reusable piece of code that does some task 
+
+ ng g s servicename
+ 

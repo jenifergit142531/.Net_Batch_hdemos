@@ -1,0 +1,108 @@
+<h1>calling a service</h1>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>MovieId</th>
+            <th>MovieName</th>
+            <th>Location</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+<tbody>
+    <tr *ngFor='let movie of currentMovie'>
+        <td>{{movie.mid}}</td>
+        <td>{{movie.mname}}</td>
+        <td>{{movie.location}}</td>
+        <td>{{movie.price}}</td>
+    </tr>
+</tbody>
+</table>
+
+<!--Displaying data in json format-->
+
+<h1>Current movies in json format</h1>
+{{currentMovie|json}}
+
+<h1>Upcoming movies</h1>
+{{upcomingMovies|json}}
+
+
+
+
+<h1>Two way data binding</h1>
+Enter your name :
+<input [(ngModel)]='Name'>
+<br>
+You entered : {{Name}} 
+
+<h1>Event binding</h1>
+<button (click)="greeting()">Greet me</button>
+
+<h1> Class Binding</h1>
+<button class="colorClass">Click me</button>
+
+<h1>Style Binding</h1>
+<button [style.background]="color">Submit color</button>
+
+
+
+<!--Data binding : string interpolation (pass the data from the class to view)-->
+<h1>String Interpolation</h1>
+<h1> Message :</h1>
+{{message}}
+
+<h1>ShowMessage :</h1>
+{{showMessage()}}
+
+<br>
+<br>
+
+<h1>Property binding</h1>
+<img [src]='imagePath' width="200pt" height="200pt"/>
+
+<h1>Attribute binding</h1>
+<table>
+    <thead>
+        
+            <tr>
+                <th [attr.colspan] ="column">{{tableHeader}}</th>
+            </tr>
+      
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                First Name
+            </td>
+            <td>
+                {{firstName}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Last Name
+            </td>
+            <td>
+                {{lastName}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+               Grade
+            </td>
+            <td>
+                {{Grade}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+               Gender
+            </td>
+            <td>
+                {{Gender}}
+            </td>
+        </tr>
+    </tbody>
+</table>
