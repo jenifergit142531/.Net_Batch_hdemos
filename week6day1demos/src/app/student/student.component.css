@@ -1,0 +1,43 @@
+.one{
+    /* background-image: url("../assets/Bookstorebg.png"); */
+    /* background-image: "assets/Bookstorebg.png"; */
+    background-color: transparent;
+    
+}
+
+.two
+{
+
+    
+    background-image: url("/assets/Bookstorebg.png");
+    /* background-color: red; */
+    color: yellow;
+
+}
+
+.three
+{
+    width: 1500px;
+    height:1500px;
+}
+
+/* div {
+    background-image: url("assets/Bookstorebg.png");
+  } */
+
+table{
+    color:brown;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    border-collapse: collapse;
+}
+
+td{
+    border: 1px solid black;
+    padding: 5px;
+}
+th{
+    border:1px solid black;
+    padding: 5px;
+    color: cornflowerblue;
+}

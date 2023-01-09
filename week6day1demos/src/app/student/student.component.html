@@ -1,0 +1,102 @@
+
+
+<p> {{today | date}}</p>
+<p> {{today | date:'MM/dd/yyyy'}}</p>
+<p> {{today | date:'dd/MM/yyyy'}}</p>
+<P>{{today | date:'mediumTime'}}</P>
+<p>{{salary | currency:'INR'}}</p>
+<p>{{salary | currency:'CAD'}}</p>
+<p>{{salary | currency:'USD'}}</p>
+
+
+<!-- <h1>Country</h1>
+
+<select (change)="SetDropDownValue($event)">
+    <option value="">Select</option>
+    <option value="IN">IN</option>
+    <option value="UK">UK</option>
+    <option value="US">US</option>
+</select>
+<h3>You have selected </h3>
+<div [ngSwitch]="dropDownValue">
+    <h3 *ngSwitchCase="'IN'">INDIA</h3>
+    <h3 *ngSwitchCase="'UK'">UNITED KINGDOM</h3>
+    <h3 *ngSwitchCase="'US'">UNITED STATES</h3>
+    <h3 *ngSwitchDefault="">None</h3>
+
+</div> -->
+
+<!--
+<div>
+    <input type="radio" name="rg" (click)="changeData(true)" checked> valid
+    <input type="radio" name="rg" (click)="changeData(false)"> Invalid
+</div>
+<div *ngIf ="isValid then thenblock else elseblock">
+    
+</div>
+<ng-template #thenblock>
+    <div>
+        <b>The Data is Valid</b>
+    </div>
+</ng-template>
+<ng-template #elseblock>
+    <div>
+        <b>The Data is Invalid </b>
+    </div>
+</ng-template>
+-->
+
+<!--
+<div *ngIf="isValid">
+<b>The Data is Valid</b>
+</div>
+<div *ngIf="!isValid">
+    <b>The Data is Invalid</b>
+</div>
+-->
+
+
+
+<h1>Student details</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Student Id</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Department</th>
+            <th>Branch</th>
+            <th>Index</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Even</th>
+            <th>Odd</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let student of students;let i = index;
+        let isFirst=first;let isLast=last;let isEven=even;let IsOdd=odd'>
+        <td>{{student.Id}}</td>
+        <td>{{student.FirstName | myTitle:student.Gender}}</td>
+        <td>{{student.LastName}}</td>
+        <td>{{student.Branch | lowercase}} </td>
+        <td>{{student.Gender | lowercase}}</td>
+        <td>{{i}}</td>
+        <td>{{isFirst}}</td>
+        <td>{{isLast}}</td>
+        <td>{{isEven}}</td>
+        <td>{{IsOdd}}</td>
+
+
+        </tr>
+
+        <tr *ngIf="!students || students.length==0">
+          <td colspan="7">
+            No student to display
+          </td>
+        </tr>
+            
+
+    
+    </tbody>
+</table>

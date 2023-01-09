@@ -1,0 +1,60 @@
+
+
+Agenda :
+
+- Directives
+- Pipes
+
+
+
+Directives :
+
+- Change the behaviour / appearance / layout of the html element.
+- Extend the functionality of the html element.
+
+Types :
+
+1.Component - that has a template  @component
+2.Structural
+
+*ngFor
+*ngIf
+*ngSwitch
+
+3.Attribute:
+
+- ngStyle
+- ngClass 
+
+
+ngFor - Local Variables
+
+1.Index
+2.First
+3.Last
+4.Even
+5.Odd
+
+ngIf : Check for condition
+
+then : true condition
+else : false condition 
+
+
+ngSwitch : Check for multiple conditions
+- ngSwitchCase
+- ngSwitchDefault
+
+
+Pipes :
+ | - Pipe symbol
+  change the data in the specified format 
+
+  Create pipe :
+
+  ng g pipe myTitle --flat
+
+  
+
+
+
