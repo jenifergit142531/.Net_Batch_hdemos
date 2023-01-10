@@ -1,0 +1,20 @@
+<h1>Course Details </h1>
+<table>
+    <thead>
+        <tr>
+            <th>Course Name</th>
+            <th>Duration in Years</th>
+            <th>Specialisation</th>
+            <th>Last Application Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let i of courses'>
+            <td>{{i.coursename}}</td>
+            <td>{{i.Duration}}</td>
+            <td>{{i.Topic}}</td>
+            <td>{{i.LastDOA}}</td>
+        </tr>
+    </tbody>
+
+</table>

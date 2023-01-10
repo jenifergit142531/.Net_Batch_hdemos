@@ -1,0 +1,40 @@
+
+
+Agenda :
+
+- Routing
+- Inter component interaction
+- Forms
+- Forms validation 
+
+Routing :
+
+- Navigating from one page to another page
+
+Client side routing :
+
+<a [routerLink]="['/home']">Home</a>
+
+Server side routing :
+
+GetHome()
+  {
+     this.router.navigate(['/home']);
+  }
+
+  Redirecting Routes:
+
+    path:'',redirectTo:'contact',pathMatch:'full'
+
+  Wildcard Routes:
+
+    path:'**',component:ErrorComponent
+
+InterComponent Interaction :
+
+- Component pass information to each other in the application.
+
+@Input : from parent to child
+@Output : from child to parent 
+
+
