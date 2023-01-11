@@ -1,23 +1,34 @@
 {
- "Grocery":[
-  {
-    "id":1,
-    "name":"sugar",
-    "quantity":12,
-    "price":48
-  },
-  {
-    "id":2,
-    "name":"Chocolates",
-    "quantity":100,
-    "price":100
-  },
-  {
-    "id":3,
-    "name":"Hersheys choco spread",
-    "quantity":50,
-    "price":250
-  }
-
- ]
+  "Grocery": [
+    {
+      "id": 1,
+      "name": "sugar",
+      "quantity": 12,
+      "price": 48
+    },
+    {
+      "id": 2,
+      "name": "Chocolates",
+      "quantity": 100,
+      "price": 100
+    },
+    {
+      "id": 3,
+      "name": "Hersheys choco spread",
+      "quantity": 50,
+      "price": 250
+    },
+    {
+      "id": 4,
+      "name": "Maggi",
+      "quantity": "10",
+      "price": "150"
+    },
+    {
+      "id": 5,
+      "name": "Tropicana",
+      "quantity": "20",
+      "price": "200"
+    }
+  ]
 }

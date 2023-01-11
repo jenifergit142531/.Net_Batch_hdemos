@@ -238,3 +238,94 @@ export class HomeComponent implements OnInit {
 
     </table>
 </div>
+
+
+CREATE :
+
+ - Insert values in the api/db
+
+ * create component :
+
+ ng g c grocery/create
+
+ * Create a route in (grocery-routing.module.ts)
+
+ import { CreateComponent } from './create/create.component';
+  { path : 'grocery/create', component:CreateComponent }
+
+* define the logic in the service
+
+create(payload:Grocery)
+  {
+    return this.http.post<Grocery>('http://localhost:3000/Grocery',payload);
+  }
+
+
+  *implement the service in the create.component.ts
+
+
+  export class CreateComponent implements OnInit {
+
+  groceryForm : Grocery={
+     id:0,
+     name:'',
+     quantity:0,
+     price:0
+
+  };
+
+  constructor(private groceryService:GroceryService,private router:Router){}
+  
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+
+  create()
+  {
+    this.groceryService.create(this.groceryForm)
+    .subscribe({
+      next:(data)=>{
+        this.router.navigate(["/grocery/home"])
+      },
+      error:(err)=>
+      console.log(err)
+    })
+  }
+}
+
+
+* Create a HTML Form to enter the data
+
+<div class="container">
+    <legend>Create Grocery Items</legend>
+    <form>
+        <div class="mb-3">
+          <label for="txtName" class="form-label">Product Name</label>
+          <input type="text" class="form-control" id="txtName" name="name" [(ngModel)]="groceryForm.name"/>
+          
+        </div>
+        <div class="mb-3">
+            <label for="txtQuantity" class="form-label">Quantity</label>
+            <input type="text" class="form-control" id="txtQuantity" name="quantity" [(ngModel)]="groceryForm.quantity"/>
+            
+          </div>
+          <div class="mb-3">
+            <label for="txtPrice" class="form-label">Price</label>
+            <input type="text" class="form-control" id="txtPrice" name="price" [(ngModel)]="groceryForm.price"/>
+            
+          </div>
+
+          <button type="button" (click)="create()" class="btn btn-primary">Create Product</button>
+    </form>
+</div>
+
+
+Home.component.html :
+
+  <div class="row mt-2">
+        <div class="col col-md-4 offset-md-4">
+            <a class="btn btn-primary" routerLink="/grocery/create">Create</a>
+        </div>
+    </div>
+
+
