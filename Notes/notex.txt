@@ -1,0 +1,240 @@
+
+
+Agenda :
+
+- Forms
+- CRUD using Angular with Json
+
+
+Forms :
+
+- Forms are used to registration,login,submitting some data over network..
+- User friendly
+- Indicating messages about what went wrong in the Forms
+- eg:book a flight,apply for jobs online,place an order,submit a request
+
+Two types :
+1.Template driven 
+2.Model - Driven forms (Reactive forms)
+
+Template - Driven : simple forms
+
+- Use the existing template 
+- Write your logic for the forms
+- Import formsmodeule in the app.module.ts
+
+
+Model- Driven Forms / Reactive forms : complex forms
+
+- class person
+{
+   id:number;
+   name:string;
+   age:number;
+}
+
+- person.ts
+
+
+CRUD APP:
+
+Installing bootstrap
+1.npm install bootstrap
+2.Angular.json :
+"styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+
+
+- Design the database db.json 
+
+.Instaall Json server
+
+npm install -g json-server
+
+2.Configure the server on the application (package.json)
+
+"scripts": {
+    "ng": "ng",
+    "json-run":"json-server --watch db.json",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },)
+
+  "json-run":"json-server --watch db.json",
+
+3.Run the server
+
+npm run json-run
+
+
+4.Enter the values (db.json)
+
+{
+ "Grocery":[
+  {
+    "id":1,
+    "name":"sugar",
+    "quantity":12,
+    "price":48
+  },
+  {
+    "id":2,
+    "name":"Chocolates",
+    "quantity":100,
+    "price":100
+  },
+  {
+    "id":3,
+    "name":"Hersheys choco spread",
+    "quantity":50,
+    "price":250
+  }
+
+ ]
+}
+
+Apply bootstrap :app.component.html
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Fresh Mart Grocery shop</a>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+
+- Create a module 
+
+ng generate module grocery --routing
+
+- Import the grocery module to the app module
+
+import { GroceryModule } from './grocery/grocery.module';
+
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    GroceryModule
+  ]
+
+  Home Component :
+
+- Create the component
+
+ng g c grocery/home
+
+- Configure the route (grocery-routing.module.ts)
+
+const routes: Routes = [
+  { path : 'grocery/home', component:HomeComponent }
+];
+
+
+- Create a default route in (app-routing.module.ts)
+
+const routes: Routes = [
+{ path:'',redirectTo:'grocery/home',pathMatch:'full'}
+
+];
+
+
+- create a service file 
+
+ng g s grocery/grocery
+
+- import HTTPModule in the app.module.ts (interactive application - request & response)
+
+http://localhost:4200/
+
+hyper text transfer protocol - request , response
+
+import { HttpClient } from '@angular/common/http'   (grocery.service.ts)
+import { HttpClientModule } from '@angular/common/http' (app.module.ts)
+
+
+- Create API Response model / Data model
+
+* create interface
+
+ng generate interface grocery/grocery
+
+export interface Grocery {
+    id:number;
+    name:string;
+    quantity:number;
+    price:number;
+}
+
+
+READ :
+
+read the data from the API
+
+service.ts :
+
+constructor(private http: HttpClient) { }
+
+
+  get()
+  {
+    return this.http.get<Grocery[]>('http://localhost:3000/Grocery');
+  }
+
+
+homecomponent.ts :
+
+export class HomeComponent implements OnInit {
+
+  allGrocery: Grocery[] = [];
+
+  constructor(private groceryService:GroceryService){}
+   
+  ngOnInit(): void {
+    this.get();
+  }
+
+  get(){
+    this.groceryService.get().subscribe((data)=>{
+      this.allGrocery=data;
+    });
+  }
+
+
+}
+
+
+  homecomponet.html :
+
+
+<div class="container-fluid">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Product Id</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of allGrocery">
+                <th scope="row">{{item.id}}</th>
+                <!-- <td>{{item.id}}</td> -->
+                <td>{{item.name}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.price}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

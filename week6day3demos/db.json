@@ -1,0 +1,23 @@
+{
+ "Grocery":[
+  {
+    "id":1,
+    "name":"sugar",
+    "quantity":12,
+    "price":48
+  },
+  {
+    "id":2,
+    "name":"Chocolates",
+    "quantity":100,
+    "price":100
+  },
+  {
+    "id":3,
+    "name":"Hersheys choco spread",
+    "quantity":50,
+    "price":250
+  }
+
+ ]
+}
