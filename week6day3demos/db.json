@@ -3,13 +3,13 @@
     {
       "id": 1,
       "name": "sugar",
-      "quantity": 12,
-      "price": 48
+      "quantity": "16",
+      "price": "50"
     },
     {
       "id": 2,
       "name": "Chocolates",
-      "quantity": 100,
+      "quantity": "10",
       "price": 100
     },
     {

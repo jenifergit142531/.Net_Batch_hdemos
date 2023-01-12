@@ -4,13 +4,16 @@ import { CommonModule } from '@angular/common';
 import { GroceryRoutingModule } from './grocery-routing.module';
 import { HomeComponent } from './home/home.component';
 import { CreateComponent } from './create/create.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    CreateComponent
+    CreateComponent,
+    EditComponent,
+    
   ],
   imports: [
     CommonModule,

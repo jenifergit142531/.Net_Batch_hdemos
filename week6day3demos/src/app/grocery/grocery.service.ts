@@ -24,4 +24,19 @@ export class GroceryService {
     return this.http.post<Grocery>('http://localhost:3000/Grocery',payload);
   }
 
+
+  getById(id:number)
+  {
+    return this.http.get<Grocery>(`http://localhost:3000/Grocery/${id}`);
+  }
+
+  update(payload:Grocery)
+  {
+    return this.http.put(`http://localhost:3000/Grocery/${payload.id}`,payload);
+  }
+
+  delete(id:number)
+  {
+    return this.http.delete<Grocery>(`http://localhost:3000/Grocery/${id}`);
+  }
 }

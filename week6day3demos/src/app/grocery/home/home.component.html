@@ -14,6 +14,8 @@
                 <th scope="col">Product Name</th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Price</th>
+                <th scope="col">Edit Actions</th>
+                <th scope="col">Delete Actions</th>
 
             </tr>
 
@@ -25,8 +27,33 @@
                 <td>{{item.name}}</td>
                 <td>{{item.quantity}}</td>
                 <td>{{item.price}}</td>
+                <td>
+                    <a class="btn btn-primary" [routerLink]="['/grocery/edit',item.id]">Edit</a>
+                </td>
+                <td>
+                    <button type="button" (click)="openDeleteModal(item.id)" class="btn btn-danger">Delete</button>
+                </td>
             </tr>
         </tbody>
 
     </table>
 </div>
+
+<!--Modal-->
+<div class="modal" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Delete Warning !!!!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure to delete the item ?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" (click)="delete()">Confirm Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
