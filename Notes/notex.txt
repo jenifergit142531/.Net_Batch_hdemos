@@ -328,4 +328,154 @@ Home.component.html :
         </div>
     </div>
 
+    UPDATE :
+    - Create the component
+    ng g c grocery/edit
+
+    -  Configure the route 
+
+    { path: 'grocery/edit/:id', component:EditComponent}
+
+notes:
+    update grocery set pname="butter" where id=1
+
+ * define the logic in the service
+
+ getById(id:number)
+  {
+    return this.http.get<Grocery>('http://localhost:3000/Grocery/${id}');
+  }
+
+  update(payload:Grocery)
+  {
+    return this.http.put('http://localhost:3000/Grocery/${payload.id}',payload);
+  }
+
+
+ * home.component.html (create edit and delete buttons)
+
+<th scope="col">Edit Actions</th>
+                <th scope="col">Delete Actions</th>
+
+
+  <td>
+                    <a class="btn btn-primary" [routerLink]="['/grocery/edit',item.id]">Edit</a>
+                </td>
+                <td>
+                    <a class="btn btn-primary">Delete</a>
+                </td>
+
+
+
+* edit.component.ts
+
+export class EditComponent implements OnInit {
+
+  groceryForm:Grocery={
+    id:0,
+     name:'',
+     quantity:0,
+     price:0
+
+  };
+
+  constructor(private route:ActivatedRoute,private groceryService:GroceryService,private router:Router){}
+
+  ngOnInit(): void {
+    
+    this.route.paramMap.subscribe((param)=>
+    {
+      var id = Number(param.get('id'));
+      this.getById(id);
+    });
+  }
+
+  getById(id:number)
+  {
+    this.groceryService.getById(id).subscribe((data)=>
+    {
+      this.groceryForm=data;
+    });
+  }
+
+  update()
+  {
+    this.groceryService.update(this.groceryForm)
+    .subscribe({
+      next:(data)=>{
+        this.router.navigate(["/grocery/home"]);
+      },
+      error:(err)=>
+      {
+        console.log(err);
+      }
+    });
+  }
+
+}
+
+* edit.component.html
+
+
+<div class="container">
+    <legend>Edit Grocery Items</legend>
+    <form>
+        <div class="mb-3">
+          <label for="txtName" class="form-label">Product Name</label>
+          <input type="text" class="form-control" id="txtName" name="name" [(ngModel)]="groceryForm.name"/>
+          
+        </div>
+        <div class="mb-3">
+            <label for="txtQuantity" class="form-label">Quantity</label>
+            <input type="text" class="form-control" id="txtQuantity" name="quantity" [(ngModel)]="groceryForm.quantity"/>
+            
+          </div>
+          <div class="mb-3">
+            <label for="txtPrice" class="form-label">Price</label>
+            <input type="text" class="form-control" id="txtPrice" name="price" [(ngModel)]="groceryForm.price"/>
+            
+          </div>
+
+          <button type="button" (click)="update()" class="btn btn-primary">Update</button>
+    </form>
+</div>
+
+
+DELETE:
+
+- create the component
+
+   ng g c grocery/delete
+
+- define the service
+
+  delete(id:number)
+  {
+    return this.http.delete<Grocery>(`http://localhost:3000/Grocery/${id}`);
+  }
+
+  - Configure the route 
+
+   { path: 'grocery/delete/:id', component:DeleteComponent}
+
+  - delete.component.ts 
+
+
+
+
+
+  - delete.component.html
+
+
+
+
+
+
+
+
+
+
+
+
+
 
