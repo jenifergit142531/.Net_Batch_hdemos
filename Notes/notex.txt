@@ -1,0 +1,67 @@
+
+
+Agenda :
+
+- Form validation
+- Testing in angular
+- Security techniques
+
+
+Form validation :
+
+- checks if the input meets the specified criteria
+- Ensure data consistency and to create a best practices
+- set the criteria using the validator
+
+- Built in validator :
+* required
+* max length
+* min length 
+* email
+
+* Custom validation 
+
+- create a directive and add logic
+
+
+Template driven forms validator :
+
+- based on template directives at html file
+- FormsModule
+* ngModel 
+* NgForm
+
+
+Reactive forms validator:
+
+- based on the component class
+- ReactiveForms module
+
+* FormsControl  - any input control textbox,checkbox,radio...
+* FromGroup - collection of controls
+* FormBuilder - creates multiple form groups
+* FormArray - we create dynamic forms 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+<div class="container">
+    <legend>Job Portal</legend>
+    <div class="row">
+        <div class="col col-mb-8">
+            <form [formGroup]="jobForm" (ngSubmit)="save()">
+                <div class="mb-3">
+                    <label> First Name</label>
+                    <input 
+                    type="text"
+                    class="form-control"
+                    id="firstname"
+                    formControlName="firstname"/>
+                    <div 
+                    class="alert alert-danger"
+                    *ngIf="
+                    firstname?.invalid && (firstname?.touched || firstname?.dirty)">
+                        <div *ngIf="firstname?.errors?.['required']">
+                            First Name cannot be empty.Required Field 
+                        </div>
+                    </div>
+                    </div>
+                <div class="mb-3">
+                    <label> Last Name</label>
+                    <input 
+                    type="text"
+                    class="form-control"
+                    id="lastname"
+                    formControlName="lastname"/>
+                </div>
+                <button type="submit" class="btn btn-primary">submit</button>
+            </form>
+
+            <div class="col col-md-4">
+                <div style="position:fixed">{{preview}}</div>
+            </div>
+          
+        </div>
+    </div>
