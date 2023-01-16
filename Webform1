@@ -1,0 +1,84 @@
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace FirstApplication
+{
+    public partial class sampleApp : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=REV-PG02C4Y5;Initial Catalog=HCL_DB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
+            SqlCommand cmd = new SqlCommand("select * from game",con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            con.Close();
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
+
+            
+
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=REV-PG02C4Y5;Initial Catalog=HCL_DB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
+            SqlCommand cmd = new SqlCommand("insert into game(Gid,GameName,maxPlayers,gametype,level) values ('"+TextBox1.Text+"','"+TextBox2.Text+ "','"+TextBox3.Text+ "','"+TextBox4.Text+"','"+TextBox5.Text+"')",con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Response.Write("Game is INSERTED");
+        
+        
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=REV-PG02C4Y5;Initial Catalog=HCL_DB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
+            SqlCommand cmd = new SqlCommand("select * from game where Gid='"+TextBox1.Text+"'", con);
+            con.Open();
+            SqlDataReader sdr = cmd.ExecuteReader();
+            sdr.Read();
+           Label7.Text = "Your game details is as follows :";
+            Label8.Text = "Game Name =>" + sdr["GameName"].ToString();
+            Label9.Text = "Maximum Players =>" + sdr["maxPlayers"];
+            Label10.Text = "Game Type =>" + sdr["gametype"].ToString();
+            Label11.Text = "Level =>" + sdr["level"].ToString();
+
+
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=REV-PG02C4Y5;Initial Catalog=HCL_DB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
+            SqlCommand cmd = new SqlCommand("delete from game where Gid ='"+TextBox1.Text+"'", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Response.Write("Game is DELETED");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+
+            SqlConnection con = new SqlConnection(@"Data Source=REV-PG02C4Y5;Initial Catalog=HCL_DB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
+            SqlCommand cmd = new SqlCommand("update game set GameName='"+TextBox2.Text+"',maxPlayers='"+TextBox3.Text+"',gametype='"+TextBox4.Text+"',level='"+TextBox5.Text+"' where Gid ='" + TextBox1.Text + "'", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Response.Write("Game is UPDATED");
+        }
+    }
+}
