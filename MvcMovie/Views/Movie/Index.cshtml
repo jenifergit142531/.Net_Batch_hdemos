@@ -1,0 +1,14 @@
+@{
+   ViewData["Title"]="Index";
+}
+
+<h1>Movie Details</h1>
+<div>
+   @foreach(var m in @ViewBag.movies)
+   {
+    
+    <p>@m.MovieId</p>
+    <p>@m.MovieName</p>
+    <p>@m.NumberOfTickets</p>
+   }
+</div>

@@ -1,0 +1,78 @@
+
+
+Agenda :
+
+- MVC Design pattern
+- Architecture of ASP.NET MVC (.NET FRAMEWORK)
+- Understand the architecture of core MVC (.NET CORE)
+- Controllers
+- Creating controllers and actions
+- Action methods
+- Parameterized action methods
+- Action Result
+- View Result 
+
+MVC - Model - View - Controllers
+
+Design pattern :
+
+Model : It will contain data and data logic
+View : Render the web page on the browser
+Controller : Contains logic(action methods)..Interact with model and view.
+
+
+Architecture of MVC vs Core MVC :
+
+Request Life cycle model :(MVC)
+
+HTTP Request ---> Routing(route handler)----> Controller ---->Action execution
+---->Rendered as view ---->HTTP Response
+
+
+Request life cycle model : (Core mvc)
+
+HTTP Request ---> Middleware (s/w component)-->Routing--->Controller --->action execution
+--->Render view(Result execution)--->HTTP Response
+
+Creating Web application :
+
+dotnet new mvc -o MvcMovie
+
+Controller :
+
+- Handles the user action(logic)
+- Render a view 
+- Strictly create the controller only inside the controller folder
+- Controller name should begin with capital letter
+- suffix with controller keyword
+- contains many action methods
+
+Action Methods :
+
+- methods must be defined only inside the controller
+- should perform logic
+- all the action methods MUST BE PUBLIC
+- [ActionName("somename")] - current active action method
+- [NonAction] - Not active anymore,not executed
+- HTTP Verbs [get,post,put,delete]
+
+Read - get : select
+create - post : insert
+Update - put : update
+Delete - delete : delete
+
+
+Action methods with parameters :
+
+http://localhost:5270/movie/confirm?username=jeni&tickets=5
+
+
+
+
+
+
+
+
+
+
+
