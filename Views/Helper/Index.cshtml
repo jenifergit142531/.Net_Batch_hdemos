@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+  ViewBag.Title="HtmlHelperDemo";
+}
+
+<hr>
+<h3>User Registration Form </h3>
+@using(Html.BeginForm("UserRegistration","Helper"))
+{
+    <div class="form-group">
+        @Html.Label("User Name") </div>
+        <div>
+        @Html.TextBox("username")
+        </div>
+        <div class="form-group">
+        @Html.Label("Email Id") </div>
+        <div>
+        @Html.TextBox("email")
+        </div>
+          <div class="form-group">
+        @Html.Label("Gender") </div>
+        <br>
+        <div>
+        Male : @Html.RadioButton("Gender","male")<br>
+        Female :@Html.RadioButton("Gender","female")<br>
+        </div>
+         <div class="form-group">
+             @Html.Label("Courses")</div>
+             <br>
+             <div>
+                 C# @Html.CheckBox("courses",new {value="C#"})
+                 <br>
+                 ASP.NET @Html.CheckBox("courses",new {value="ASP.NET"})
+                 <br>
+                 ADO.NET @Html.CheckBox("courses",new {value="ADO.NET"})
+                 </div>
+                 <br>
+
+                  <div class="form-group">
+                 <input type="submit" value="submit"/>
+    </div>
+
+
+               
+} 

@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>Razor View Syntax</h1>
+<h2>Inline Razer code : @DateTime.Now.ToShortDateString()</h2>
+
+
+<h1>Multiline Razor view code</h1>
+@{
+    var date=DateTime.Now.ToShortDateString();
+    var message = "Hello world";
+    <h2>Today's date is : @date</h2>
+    <h2>@message</h2>
+}
+
+
+
+<h1>For Loop</h1>
+@for(int i=0;i<5;i++)
+{
+    @i.ToString()<br>
+}
+
+<h1>If-else</h1>
+@{
+    int a=-1;
+    if(a>0)
+    {
+        <h1>Positive number</h1>
+    }
+    else{
+        <h1>Negative number </h1>
+    }
+}
