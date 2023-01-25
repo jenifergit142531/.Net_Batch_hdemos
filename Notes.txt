@@ -1,0 +1,81 @@
+
+
+
+Agenda :
+
+- Entity Framework core
+- CRUD in EF core
+
+- Entity framework :
+
+ORM - object relational mapper
+
+- Database first approach (db(sql) ---> scaffolded --->application)
+- Code first approach ( class --->migrated ---db)
+
+
+Code first approach:
+
+Step 1 : Installing the packages (nuget PM)
+
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+Microsoft.VisualStudio.Web.CodeGeneration.Design
+
+Step 2 : Create the class(Device.cs)
+
+public class Device
+    {
+        [Key]
+        public int DeviceId { get; set; }
+        public string DeviceName { get; set; }
+        public int Quantity { get; set; }
+        public int Price { get; set; }
+
+    }
+
+Step 3 : Configure the data source (appsettings.json)
+
+ "ConnectionStrings": {
+    "DeviceConnection": "Data Source=REV-PG02C4Y5;Initial Catalog=HCL_DB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False"
+  },
+
+
+Step 4 : Create a Context class
+
+DBContext : Info about the database
+DBSet : Database table
+
+public class DeviceDBContext : DbContext
+    {
+        public DeviceDBContext(DbContextOptions<DeviceDBContext> options) : base(options)
+        {
+        }
+
+        public DbSet<Device> Devices { get; set; }
+    }
+
+
+Step 5 : Configure the services on the middleware 
+
+
+builder.Services.AddDbContext<DeviceDBContext>(
+    options => options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DeviceConnection")));
+
+
+Step 6 : Use the Package manager commands to migrate the database 
+
+add-migration 'initialcreate'
+
+update-database
+
+Step 7 : Configure the controller for CRUD operation
+
+Step 8 : Run the application
+
+
+
+
+
