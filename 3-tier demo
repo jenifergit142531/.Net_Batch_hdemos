@@ -1,0 +1,94 @@
+Database Tier :
+
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ClassLibrary1
+{
+    public class Class1
+    {
+    }
+
+    public class DAL
+    {
+        SqlConnection con = new SqlConnection("Data Source=REV-PG02C4Y5;Initial Catalog=dbfirst;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
+
+
+        public void add(string name)
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("insert into one values('" + name + "')", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+        }
+
+        public object select()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("select * from one", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+
+        }
+    }
+}
+
+
+Application Tier :
+
+using ClassLibrary1;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ApplicationTier
+{
+    public class Class1
+    {
+
+
+    }
+
+    public class BL
+    {
+        DAL obj1 = new DAL();
+
+        public void AddItem(string name)
+        {
+            obj1.add(name);
+        }
+
+        public object selectItem()
+        {
+            return obj1.select();
+        }
+    }
+}
+
+
+Presentation Layer :
+
+
+protected void Button1_Click(object sender, EventArgs e)
+        {
+            BL obj2 = new BL();
+            obj2.AddItem(TextBox1.Text);
+            GridView1.DataSource = obj2.selectItem();
+            GridView1.DataBind();
+        }
+
+
+
+
+
+
+
+
