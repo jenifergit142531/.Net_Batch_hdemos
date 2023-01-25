@@ -1,0 +1,78 @@
+
+
+
+
+Agenda :
+
+- Database first approach using EF Core
+
+- State Management 
+* View State
+* Session
+* Cookies
+* Cache
+
+- Model Validation
+
+
+
+DBfirst - EF Core:
+
+- Create database
+- Create tables
+- Insert values in the tables
+- Install packages
+- Scaffold-DbContext "Data Source=REV-PG02C4Y5;Initial Catalog=dbfirst;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;
+"Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+- //add service for dbcontext IN MIDDLEWARE
+
+builder.Services.AddDbContext<DbfirstContext>();
+
+Model Validation :
+
+Model : contains data and data logic
+- Consist of classes that interacts with the db
+- sql,xml,json,oracle,mongo....
+
+Validation : Checking to see if the user inputs the correct data
+
+[Range]
+[Required]
+[EmailAddress]
+[PhoneNumber]
+
+
+State Management :
+
+- Preserve the state of the web page ,control,data 
+
+Two ways :
+1.Client side SM : happens on the browser / client computer - cookie,View state
+2.Server side SM : stores on the server - session
+
+Why :
+
+HTTP - Hyper text transfer protocol 
+
+HTTP is a stateless protocol
+
+- Responsibility to maintain the state in the application 
+
+cookies :
+
+- Small piece of information that is stored on the browser
+
+View State :
+
+- Transfer the data from controller actions to the browser
+
+* ViewBag - complex data 
+* View Data - simple data
+* Temp Data - simple data 
+
+
+
+
+
+

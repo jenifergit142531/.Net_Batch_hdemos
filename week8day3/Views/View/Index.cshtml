@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>@ViewData["title"]</h1>
+@{
+    var data = ViewBag.Items;
+
+    <table>
+    <tr>
+            <td>@data.PurchaseId  </td> </tr>
+            
+            <tr>
+
+            <td>@data.ProductName</td>
+            </tr>
+            
+            <tr>
+            <td>@data.NumberOfItems</td>
+               </tr>
+                   <tr>
+            <td>@data.Address</td>
+                </tr>
+
+        <tr>
+            <td>@data.Email</td>
+        </tr>
+        <tr>
+            <td>@data.PhoneNumber</td>
+            </tr>
+   
+    </table>
+}
