@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <nav style="align-items:left">
+        <h3>Menu</h3>
+        @Html.ActionLink("About","About")<br />
+        @Html.ActionLink("Home","home")<br />
+        @Html.ActionLink("Privacy","Privacy")<br />
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+
+    <div>
+        @RenderSection("Note",false)
+       
+    </div>
+    <div>
+        @RenderSection("Footer",false)
+    </div>
+</body>
+
+</html>

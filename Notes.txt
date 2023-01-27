@@ -1,0 +1,53 @@
+
+
+
+Agenda :
+
+- State management 
+
+* Query string
+* cache
+* session
+
+
+- Layout View 
+
+Query string (CSSM):
+
+- ?
+- When you pass the data from one page to another page over the url
+
+
+Cache :
+
+- Stores the frequently used data in the browser
+- Faster processing for the subsequent request
+
+Cache hit : when data is found on the cache
+Cache miss : when data cant be found in the cache
+
+Two types:
+
+1.Output cache
+2.In memory cache
+
+Session :
+
+- stores the data while the user is browsing the application
+- when the user do not browse / app is idle => timeout session and deletes the data.
+
+
+Are you still using it ?
+Are you still logged on ?
+Your session is timeout
+
+Layout view : 
+
+- Specific UI portion of the page remains the same throughout the application
+
+@RenderBody : ALL the contents from child view is included here
+@RenderSection : only a PART of child view is included
+
+
+
+
