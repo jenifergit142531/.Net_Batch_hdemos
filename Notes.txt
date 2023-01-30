@@ -1,0 +1,67 @@
+
+
+Agenda :
+
+- Dependency injection
+- Middleware
+
+
+Dependency Injection :
+
+Deppendency inversion principle :[High level modules should not depend on low level modules]
+
+- Software design pattern
+- Loosely coupled code
+- Code maintaintable
+
+Problem :
+
+- Rewrite the object instantiation for every classes 
+
+What to achieve :
+
+- Create a loosely coupled code that will have one object / controller
+
+Solution : DI
+
+- Creating an interface 
+- Interface will have all the methods from classes
+- Create an object for the interface that calls its methods 
+
+
+Lifetime registration of the services :
+
+					Given HTTP Request						Different HTTP Request
+- Transient           new instance								new instance
+- Scoped		      same instance								new instance	
+- Singleton			  same instance								same instance 
+
+
+Middleware :
+
+- software component 
+- Control how applications behave for a HTTP Request and HTTP Response.
+- Control the flow of execution 
+
+
+What it does ??
+
+- Generate an HTTP Response against the HTTP Request
+- Can accept the HTTP request and then PASS this request to another middlware
+- Can also pass the Http response to another middleware
+
+Two types :
+
+- Built in middleware
+
+* session
+* routing
+* exception handler
+* static files
+* Mapcontroller route
+* http redirection
+* Authorization
+
+
+
+- Custom middleware  : You need to create ,write logic and include that in the pipeline

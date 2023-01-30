@@ -1,0 +1,38 @@
+using week8day5.Models;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+//add DI
+
+builder.Services.AddTransient<IAllPlayers, AllPlayerGenerator>();
+builder.Services.AddTransient<IPlayerGenerator, ChessPlayerGenerator>();
+
+//builder.Services.AddTransient<MyMiddleware>();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
+//app.UseMiddleware<MyMiddleware>();
+
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();

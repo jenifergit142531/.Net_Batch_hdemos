@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "week8day5", "week8day5\week8day5.csproj", "{259C92D0-4FC0-4FEE-9DC7-97BCB6DF2992}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4D0B737D-1E2A-4CA5-A1C3-8B9A2B2C5A7C}"
+	ProjectSection(SolutionItems) = preProject
+		Notes.txt = Notes.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Middleware", "Middleware\Middleware.csproj", "{1185C22F-FA29-44A8-AC8E-224F0728331B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{259C92D0-4FC0-4FEE-9DC7-97BCB6DF2992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{259C92D0-4FC0-4FEE-9DC7-97BCB6DF2992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{259C92D0-4FC0-4FEE-9DC7-97BCB6DF2992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{259C92D0-4FC0-4FEE-9DC7-97BCB6DF2992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1185C22F-FA29-44A8-AC8E-224F0728331B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1185C22F-FA29-44A8-AC8E-224F0728331B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1185C22F-FA29-44A8-AC8E-224F0728331B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1185C22F-FA29-44A8-AC8E-224F0728331B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5027940-2715-4DA0-8061-955AB2BC77D9}
+	EndGlobalSection
+EndGlobal
