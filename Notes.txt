@@ -1,0 +1,116 @@
+
+
+
+
+Agenda :
+
+- Introduction to web api
+- RESTful services
+- Routing
+- Using Routes and controllers in web api
+- Data return formats
+
+
+Introduction :
+
+API : Application programming interface
+
+- Contain definition,protocol,tools for building applications 
+- Intermediate software that can handle your request and response from 
+
+VARIOUS CLIENTS (Mobile,Laptop,desktop,tab....)
+
+Why ??
+
+- Portable
+- Content negotiation
+- Easy to implement
+- No view support
+
+
+web app:
+
+HomeController : Controller
+
+Web api :
+
+WeatherForecastController : ControllerBase
+
+
+Two methodology :
+
+- SOAP
+- REST
+
+SOAP : Simple object access protocol
+
+- understands only XML data (code in xml)
+- return the response as xml data(less supportive on different devices)
+- Write the code in tags
+
+<soapenvelop> 
+<soapheader>soap protocol </soapheader>
+<soapbody>some content here </soapbody>
+<soapfault>Error in the code</soapfault>
+</soapenvelop>
+
+REST - Representation state transfer 
+
+- Architecture / design pattern
+
+* HTTP request and response
+* Easy to implement
+* Supports various data formats xml,text,json
+* Supports different HTTP Verbs (GET,PUT,POST,DELETE)
+
+GET  : SELECT / READ
+PUT : UPDATE
+POST : INSERT / CREATE
+DELETE : DELETE 
+
+
+* Easy to deploy (self hosting,IIS Server,azure)
+
+Protocol : HTTP / HTTPS
+
+Testing tools : Postman / fiddler  
+
+
+HTTP Status codes:
+
+100 - Information
+200 - success
+300 - redirection
+400 - client error
+500 - server error
+
+Routing : navigate from between web pages
+
+- Conventional
+
+//app.MapControllers();
+
+//Conventional Routing 
+
+app.MapControllerRoute(
+    name:"default",
+    pattern:"api/{controller}/{id}"  
+    );
+
+
+- Attribute routing 
+
+[route("attributename")]
+
+
+Data return types :
+
+- Void (does not return value)
+- Primitive type ( string,int,float,bool)
+- Complex type (object)
+- IHttpActionResult
+- HttpResponsemessage
+
+
+
+
