@@ -1,0 +1,23 @@
+
+
+Agenda :
+
+- Create a REST Api with data model
+- Web api consumption using HTTP Client
+- Consuming web api in asp.net Core MVC
+
+
+Consuming the web api :
+
+- Identify your client(Console application)
+- Create a HTTP Client class
+- Create a request
+- Execute the request
+- Receive the response
+* Status Information ( Status code , Status message)
+* Response body
+- Extract the information in your terminal
+- Close the HTTP Client 
+
+
+
